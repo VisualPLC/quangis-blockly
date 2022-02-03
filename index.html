@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geo-analytical question formulation</title>
+	<script src="https://unpkg.com/blockly/blockly.min.js"></script>
+</head>
+<body>
+	<h3>Formulate a geo-analytical question here!</h3>
+	<div id="blocklyDiv" style="height: 500px; width: 1200px;"></div>
+	<xml id="toolbox" style="display:none">
+		<category name="Question words">
+			<block type="where"></block>
+			<block type="what"></block>
+			<block type="which"></block>
+			<block type="what_area"></block>
+			<block type="how_many"></block>
+			<block type="from_where"></block>
+		</category>
+		<category name="Question goals">
+			<block type="measure1"></block>
+			<block type="measure2"></block>
+			<block type="measure3"></block>
+			<block type="measure4"></block>
+		</category>
+		<category name="Condition">
+			<block type="condition1"></block>
+			<block type="condition2"></block>
+			<block type="condition3"></block>
+			<block type="condition4"></block>
+			<block type="condition5"></block>
+		</category>
+		<category name="Support and Extent">
+			<block type="support"></block>
+			<block type="extent"></block>
+			<block type="temporal_extent1"></block>
+			<block type="temporal_extent2"></block>
+		</category>
+		<category name="Modifier">
+			<block type="modifier"></block>
+		</category>
+		<category name="Concept and Grid">
+			<block type="corecon"></block>
+			<block type="grid1"></block>
+			<block type="grid2"></block>
+		</category>
+	</xml>
+	<script type="module" src="blocks.js"></script>
+	<script>
+		var workspace = Blockly.inject('blocklyDiv', {toolbox: document.getElementById('toolbox')});
+	</script>
+</body>
+</html>
