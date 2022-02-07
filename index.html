@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Geo-analytical question formulation</title>
+	<script src="https://unpkg.com/blockly/blockly.min.js"></script>
+	<script type='module' src="blocks.js"></script>
+	<script src="generator.js"></script>
+</head>
+<body>
+	<div id="blocklyDiv" style="height: 460px; width: 1200px;"></div>
+	<div id="questionDiv" style="height: 100px; width: 1200px; font-size: 30px"></div>
+	<xml id="toolbox" style="display:none">
+		<category name="Question words" colour="150">
+			<block type="where"></block>
+			<block type="what"></block>
+			<block type="which"></block>
+			<block type="what_area"></block>
+			<block type="how_many"></block>
+			<block type="from_where"></block>
+		</category>
+		<category name="Noun phrases" colour="230">
+			<block type="noun_phrase1"></block>
+			<block type="noun_phrase2"></block>
+			<block type="noun_phrase3"></block>
+			<block type="noun_phrase4"></block>
+			<block type="grid1"></block>
+			<block type="grid2"></block>
+		</category>
+		<category name="Relationships" colour="285">
+			<block type="relationship1"></block>
+			<block type="relationship2"></block>
+			<block type="relationship3"></block>
+			<block type="relationship4"></block>
+		</category>
+		<category name="Extent" colour="50">
+			<block type="supportvalue"></block>
+			<block type="extentvalue"></block>
+			<block type="temporalextent1"></block>
+			<block type="temporalextent2"></block>
+		</category>
+	</xml>
+	<script>
+		let workspace = Blockly.inject('blocklyDiv', {toolbox: document.getElementById('toolbox')});
+		workspace.addChangeListener(generator);
+	</script>
+</body>
+</html>
