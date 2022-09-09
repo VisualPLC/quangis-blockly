@@ -1,6 +1,6 @@
 import * as Blockly from 'blockly';
-import {setCategory, hideCategory, disable_sup_grid} from './blocks.js';
-import {ques_generator} from './generator.js';
+import './blocks.js';
+import {ques_generator, setCategory, hideCategory, disable_sup_grid} from './generator.js';
 
 function injectWorkspace() {
 
