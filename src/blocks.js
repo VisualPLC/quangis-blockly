@@ -1,3 +1,5 @@
+import * as Blockly from 'blockly';
+
 //Question words
 Blockly.Blocks['where'] = {
   init: function () {
@@ -1172,7 +1174,7 @@ Blockly.gridFlyout={};
 Blockly.GRIDFLYOUT_CATEGORY_NAME="flyout_grid";
 Blockly.gridFlyout.Blocks=[];
 
-function disable_sup_grid(){
+export function disable_sup_grid(workspace){
   let elelist=[];
   workspace.getAllBlocks(true).forEach(element =>{
     elelist.push(element.type);
@@ -1278,7 +1280,7 @@ Blockly.gridFlyout.flyoutCategory=function(c){
   return d
 };
 
-function hideCategory(){
+export function hideCategory(){
   document.getElementById('queCate').style.display = ''
   document.getElementById('npWhichCate').style.display = 'none'
   document.getElementById('npCate').style.display = 'none'
@@ -1313,7 +1315,7 @@ function rel1Category(){
   document.getElementById('relCate').style.display = ''
 }
 
-function setCategory() {
+export function setCategory(workspace) {
   const where = workspace.getBlocksByType("where");
   const what = workspace.getBlocksByType("what");
   const which = workspace.getBlocksByType("which");

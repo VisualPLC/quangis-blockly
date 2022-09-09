@@ -6,7 +6,7 @@ const removehintWords = (str, arr) => {
     }, str);
 };
 
-function ques_generator() {
+export function ques_generator(workspace) {
     let question = '';
 
     const where = workspace.getBlocksByType("where");

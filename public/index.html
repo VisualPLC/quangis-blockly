@@ -3,20 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Geo-analytical question formulation</title>
-	<script src="https://unpkg.com/blockly/blockly.min.js"></script>
 	<style>
 		h1 {text-align: center;}
 		#blocklyContainer {
-			position: relative;
 			width: 100%;
 			height: 60vh;
-		}
-		#blocklyDiv {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
 		}
 		#quesContainer {
 			position: relative;
@@ -35,8 +26,7 @@
 			font-size: 25px;
 		}
 	</style>
-	<script src="../src/blocks.js"></script>
-	<script src="../src/generator.js"></script>
+	<script type="module" src="../src/index.ts"></script>
 	<link rel="shortcut icon" href="#" />
 </head>
 <body>
@@ -205,27 +195,5 @@
 <!--			<block type="temporalextent2"></block>-->
 		</category>
 	</xml>
-	<script>
-		let workspace = Blockly.inject('blocklyDiv', {
-			toolbox: document.getElementById('toolbox'),
-			zoom: {
-				controls: true,
-				wheel: true,
-				startScale: 1,
-				maxScale: 1.5,
-				minScale: 0.8,
-				scaleSpeed: 1.2
-			}
-		});
-		function refresh(){
-			setCategory()
-			ques_generator()
-			disable_sup_grid()
-		}
-		workspace.addChangeListener(refresh);
-		hideCategory();
-		Blockly.myFlyout&&Blockly.myFlyout.flyoutCategory&&(workspace.registerToolboxCategoryCallback(Blockly.MYFLYOUT_CATEGORY_NAME,Blockly.myFlyout.flyoutCategory));
-		Blockly.gridFlyout&&Blockly.gridFlyout.flyoutCategory&&(workspace.registerToolboxCategoryCallback(Blockly.GRIDFLYOUT_CATEGORY_NAME,Blockly.gridFlyout.flyoutCategory));
-</script>
 </body>
 </html>
