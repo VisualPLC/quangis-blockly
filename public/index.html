@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <title>Geo-analytical question formulation</title>
     <style>
-        h1 {text-align: center;}
-        #blocklyContainer {
+        * {
+            margin: 0; padding: 0;
+        }
+        h1 {
+            text-align: center;
+        }
+        html, body, #container {
             width: 100%;
-            height: 60vh;
+            height: 100%;
+        }
+        #container {
+            display: table;
+        }
+        #container > * {
+            display: table-row;
+        }
+        #container > * > * {
+            display: table-cell;
+        }
+        #blocklyContainer {
+            height: 100%;
         }
         #quesContainer {
             position: relative;
@@ -17,26 +34,25 @@
             border: 2px groove;
         }
         #questionDiv {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            font-family: "Times New Roman";
             font-size: 25px;
+            padding: 0 1em;
         }
     </style>
     <script type="module" src="../src/index.ts"></script>
     <link rel="shortcut icon" href="#" />
 </head>
 <body>
-    <h1>Generating your geo-analytical question</h1>
-    <section id="quesContainer">
-        <div id="questionDiv"></div>
-    </section>
-    <section id="blocklyContainer">
-        <div id="blocklyDiv"></div>
-    </section>
+    <div id="container">
+        <section>
+            <h1>Generating your geo-analytical question</h1>
+        </section>
+        <section id="quesContainer">
+            <div id="questionDiv"></div>
+        </section>
+        <section id="blocklyContainer">
+            <div id="blocklyDiv"></div>
+        </section>
+    </div>
     <xml id="toolbox">
         <category name="Question words" colour="150" toolboxitemid="queCate">
             <block type="where">
