@@ -1,0 +1,42 @@
+{
+  "name": "gis-question-formulator",
+  "version": "0.0.0",
+  "description": "The question formulator for GIS questions in the QuAnGIS project. It ships a user interface based on Blockly.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel public/index.html",
+    "build": "parcel build public/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quangis/gis-question-formulator.git"
+  },
+  "keywords": [
+    "GIS",
+    "blockly",
+    "core",
+    "concepts",
+    "geographical",
+    "information",
+    "geo-analytical",
+    "question",
+    "answering"
+  ],
+  "author": "Haiqi Xu, Niels Steenbergen, Enkhbold Nyamsuren, Simon Scheider, Eric Top",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/quangis/gis-question-formulator/issues"
+  },
+  "homepage": "https://github.com/quangis/gis-question-formulator#readme",
+  "dependencies": {
+    "blockly": "^8.0.5"
+  },
+  "devDependencies": {
+    "parcel": "next",
+    "parcel-reporter-static-files-copy": "^1.3"
+  },
+  "staticFiles": {
+    "staticPath": "node_modules/blockly/media",
+    "staticOutPath": "media"
+  }
+}
