@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Geo-analytical question formulation</title>
     <style>
         * {
@@ -56,153 +56,159 @@
     <xml id="toolbox">
         <category name="Question words" colour="150" toolboxitemid="queCate">
             <block type="where">
-                <value name = "where_np_shadow">
+                <value name="where_np_shadow">
                     <shadow type="np_reminder"></shadow>
                 </value>
-                <value name = "where_extent_shadow">
+                <value name="where_extent_shadow">
                     <shadow type="extent_reminder"></shadow>
                 </value>
             </block>
             <block type="what">
-                <value name = "what_np_shadow">
+                <value name="what_np_shadow">
                     <shadow type="np_reminder"></shadow>
                 </value>
-                <value name = "what_extent_shadow">
+                <value name="what_extent_shadow">
                     <shadow type="extent_reminder"></shadow>
                 </value>
             </block>
             <block type="which">
-                <value name = "which_np_shadow">
+                <value name="which_np_shadow">
                     <shadow type="np_reminder"></shadow>
                 </value>
-                <value name = "which_extent_shadow">
+                <value name="which_extent_shadow">
                     <shadow type="extent_reminder"></shadow>
                 </value>
             </block>
             <block type="what_area1">
-                <value name = "wharea_np_shadow">
+                <value name="wharea_np_shadow">
                     <shadow type="np_reminder"></shadow>
                 </value>
-                <value name = "wharea_extent_shadow">
+                <value name="wharea_extent_shadow">
                     <shadow type="extent_reminder"></shadow>
                 </value>
             </block>
             <block type="what_area2">
-                <value name = "wharea_rel_shadow">
+                <value name="wharea_rel_shadow">
                     <shadow type="rel_reminder"></shadow>
                 </value>
-                <value name = "wharea_extent_shadow">
+                <value name="wharea_extent_shadow">
                     <shadow type="extent_reminder"></shadow>
                 </value>
             </block>
             <block type="how_many">
-                <value name = "howmany_np_shadow">
+                <value name="howmany_np_shadow">
                     <shadow type="np_reminder"></shadow>
                 </value>
-                <value name = "howmany_extent_shadow">
+                <value name="howmany_extent_shadow">
                     <shadow type="extent_reminder"></shadow>
                 </value>
             </block>
             <block type="from_where">
-                <value name = "fromwh_np_shadow">
+                <value name="fromwh_np_shadow">
                     <shadow type="np_reminder"></shadow>
                 </value>
-                <value name = "fromwh_extent_shadow">
+                <value name="fromwh_extent_shadow">
                     <shadow type="extent_reminder"></shadow>
                 </value>
             </block>
         </category>
-<!--for which, how many-->
-        <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="npWhichCate">
+        <!--for which, how many-->
+        <category name="Noun phrases" colour="240" toolboxitemid="npWhichCate">
             <block type="noun_phrase1_1">
-                <value name = "coreCAux_shadow1">
+                <value name="coreCAux_shadow1">
                     <shadow type="np_reminder"></shadow>
                 </value>
             </block>
             <block type="noun_phrase1_2">
-                <value name = "coreCAux_shadow2">
+                <value name="coreCAux_shadow2">
                     <shadow type="rel_reminder"></shadow>
                 </value>
             </block>
         </category>
-<!--for where, what, what_area, from where and noun_phrase1-->
-        <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="npCate">
+        <!--for where, what, what_area, from where and noun_phrase1-->
+        <category name="Noun phrases" colour="240" toolboxitemid="npCate">
             <block type="noun_phrase2">
-                <value name = "adjcoreC_shadow">
+                <value name="adjcoreC_shadow">
                     <shadow type="rel_reminder"></shadow>
                 </value>
             </block>
             <block type="noun_phrase3">
-                <value name = "coreCOfCoreC_shadow1">
+                <value name="coreCOfCoreC_shadow1">
                     <block type="noun_phrase3_connect">
-                        <value name = "np3_connect_shadow"><shadow type="rel_reminder"></shadow></value>
+                        <value name="np3_connect_shadow">
+                            <shadow type="rel_reminder">
+                            </shadow>
+                        </value>
                     </block>
                     <shadow type="np_reminder"></shadow>
                 </value>
             </block>
             <block type="noun_phrase4">
-                <value name = "distCoreC">
+                <value name="distCoreC">
                     <block type="noun_phrase4_from">
-                        <value name = "np4_from_shadow"><shadow type="rel_reminder"></shadow></value>
+                        <value name="np4_from_shadow">
+                            <shadow type="rel_reminder">
+                            </shadow>
+                        </value>
                     </block>
                 </value>
-                <value name = "distCoreC_shadow">
+                <value name="distCoreC_shadow">
                     <shadow type="np_reminder"></shadow>
                 </value>
             </block>
         </category>
-        <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="np2Cate", custom="flyout_grid">
+        <category name="Noun phrases" colour="240" toolboxitemid="np2Cate" custom="flyout_grid">
             <block type="noun_phrase2">
-                <value name = "adjcoreC_shadow">
+                <value name="adjcoreC_shadow">
                     <shadow type="rel_reminder"></shadow>
                 </value>
             </block>
             <block type="grid1"></block>
             <block type="grid2"></block>
         </category>
-        <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="np3Cate">
+        <category name="Noun phrases" colour="240" toolboxitemid="np3Cate">
             <block type="noun_phrase2">
-                <value name = "adjcoreC_shadow">
+                <value name="adjcoreC_shadow">
                     <shadow type="rel_reminder"></shadow>
                 </value>
             </block>
         </category>
-        <category name="Relationships&nbsp;&nbsp;&nbsp;" colour="300" toolboxitemid="relCate">
+        <category name="Relationships" colour="300" toolboxitemid="relCate">
             <block type="relationship1">
-                <value name = "rel1_np_shadow">
+                <value name="rel1_np_shadow">
                     <shadow type="np_reminder"></shadow>
                 </value>
             </block>
             <block type="relationship2">
-                <value name = "rel3_np_shadow">
+                <value name="rel3_np_shadow">
                     <shadow type="np_reminder"></shadow>
                 </value>
             </block>
             <block type="relationship3"></block>
             <block type="relationship4">
-                <value name = "rel4_np">
+                <value name="rel4_np">
                     <block type="rel4_np"></block>
                 </value>
             </block>
             <block type="relationship5">
-                <value name = "rel5_np">
+                <value name="rel5_np">
                     <block type="rel5_np"></block>
                 </value>
             </block>
             <block type="relationship6"></block>
         </category>
-        <category name="Extent" colour="50" toolboxitemid="extCate", custom="flyout_extent">
+        <category name="Extent" colour="50" toolboxitemid="extCate" custom="flyout_extent">
             <block type="support">
-                <value name = "sup_np_shadow">
+                <value name="sup_np_shadow">
                     <shadow type="np_reminder"></shadow>
                 </value>
-                <value name = "sup_ext_shadow">
+                <value name="sup_ext_shadow">
                     <shadow type="spaextent_reminder"></shadow>
                 </value>
-           </block>
-           <label text="Spatial extent:"></label>
-           <block type="extent">
-                <value name = "temext_shadow">
+            </block>
+            <label text="Spatial extent:"></label>
+            <block type="extent">
+                <value name="temext_shadow">
                     <shadow type="temextent_reminder"></shadow>
                 </value>
             </block>
