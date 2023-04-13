@@ -1,30 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Geo-analytical question formulation</title>
+    <script src="https://unpkg.com/blockly@9.2.1/blockly.min.js"></script>
+    <!--	<script src="\package\blockly_compressed.js"></script>-->
     <style>
-        * {
-            margin: 0; padding: 0;
-        }
-        h1 {
-            text-align: center;
-        }
-        html, body, #container {
-            width: 100%;
-            height: 100%;
-        }
-        #container {
-            display: table;
-        }
-        #container > * {
-            display: table-row;
-        }
-        #container > * > * {
-            display: table-cell;
-        }
+        h1 {text-align: center;}
         #blocklyContainer {
-            height: 100%;
+            position: relative;
+            width: 100%;
+            height: 75vh;
+        }
+        #blocklyDiv {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
         #quesContainer {
             position: relative;
@@ -34,188 +27,214 @@
             border: 2px groove;
         }
         #questionDiv {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-family: "Times New Roman";
             font-size: 25px;
-            padding: 0 1em;
         }
     </style>
-    <script type="module" src="../src/index.ts"></script>
-    <link rel="shortcut icon" href="https://questionbasedanalysis.com/wp-content/themes/UU2014/images/favicon.ico" />
+    <script src="blocks.js"></script>
+    <script src="generator.js"></script>
+    <script src="blockly_ner.js"></script>
+    <link rel="shortcut icon" href="#" />
 </head>
 <body>
-    <div id="container">
-        <section>
-            <h1>Generating your geo-analytical question</h1>
-        </section>
-        <section id="quesContainer">
-            <div id="questionDiv"></div>
-        </section>
-        <section id="blocklyContainer">
-            <div id="blocklyDiv"></div>
-        </section>
-    </div>
-    <xml id="toolbox">
-        <category name="Question words" colour="150" toolboxitemid="queCate">
-            <block type="where">
-                <value name="where_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-                <value name="where_extent_shadow">
-                    <shadow type="extent_reminder"></shadow>
-                </value>
-            </block>
-            <block type="what">
-                <value name="what_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-                <value name="what_extent_shadow">
-                    <shadow type="extent_reminder"></shadow>
-                </value>
-            </block>
-            <block type="which">
-                <value name="which_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-                <value name="which_extent_shadow">
-                    <shadow type="extent_reminder"></shadow>
-                </value>
-            </block>
-            <block type="what_area1">
-                <value name="wharea_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-                <value name="wharea_extent_shadow">
-                    <shadow type="extent_reminder"></shadow>
-                </value>
-            </block>
-            <block type="what_area2">
-                <value name="wharea_rel_shadow">
-                    <shadow type="rel_reminder"></shadow>
-                </value>
-                <value name="wharea_extent_shadow">
-                    <shadow type="extent_reminder"></shadow>
-                </value>
-            </block>
-            <block type="how_many">
-                <value name="howmany_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-                <value name="howmany_extent_shadow">
-                    <shadow type="extent_reminder"></shadow>
-                </value>
-            </block>
-            <block type="from_where">
-                <value name="fromwh_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-                <value name="fromwh_extent_shadow">
-                    <shadow type="extent_reminder"></shadow>
-                </value>
-            </block>
-        </category>
-        <!--for which, how many-->
-        <category name="Noun phrases" colour="240" toolboxitemid="npWhichCate">
-            <block type="noun_phrase1_1">
-                <value name="coreCAux_shadow1">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-            </block>
-            <block type="noun_phrase1_2">
-                <value name="coreCAux_shadow2">
-                    <shadow type="rel_reminder"></shadow>
-                </value>
-            </block>
-        </category>
-        <!--for where, what, what_area, from where and noun_phrase1-->
-        <category name="Noun phrases" colour="240" toolboxitemid="npCate">
-            <block type="noun_phrase2">
-                <value name="adjcoreC_shadow">
-                    <shadow type="rel_reminder"></shadow>
-                </value>
-            </block>
-            <block type="noun_phrase3">
-                <value name="coreCOfCoreC_shadow1">
-                    <block type="noun_phrase3_connect">
-                        <value name="np3_connect_shadow">
-                            <shadow type="rel_reminder">
-                            </shadow>
-                        </value>
-                    </block>
-                    <shadow type="np_reminder"></shadow>
-                </value>
-            </block>
-            <block type="noun_phrase4">
-                <value name="distCoreC">
-                    <block type="noun_phrase4_from">
-                        <value name="np4_from_shadow">
-                            <shadow type="rel_reminder">
-                            </shadow>
-                        </value>
-                    </block>
-                </value>
-                <value name="distCoreC_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-            </block>
-        </category>
-        <category name="Noun phrases" colour="240" toolboxitemid="np2Cate" custom="flyout_grid">
-            <block type="noun_phrase2">
-                <value name="adjcoreC_shadow">
-                    <shadow type="rel_reminder"></shadow>
-                </value>
-            </block>
-            <block type="grid1"></block>
-            <block type="grid2"></block>
-        </category>
-        <category name="Noun phrases" colour="240" toolboxitemid="np3Cate">
-            <block type="noun_phrase2">
-                <value name="adjcoreC_shadow">
-                    <shadow type="rel_reminder"></shadow>
-                </value>
-            </block>
-        </category>
-        <category name="Relationships" colour="300" toolboxitemid="relCate">
-            <block type="relationship1">
-                <value name="rel1_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-            </block>
-            <block type="relationship2">
-                <value name="rel3_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-            </block>
-            <block type="relationship3"></block>
-            <block type="relationship4">
-                <value name="rel4_np">
-                    <block type="rel4_np"></block>
-                </value>
-            </block>
-            <block type="relationship5">
-                <value name="rel5_np">
-                    <block type="rel5_np"></block>
-                </value>
-            </block>
-            <block type="relationship6"></block>
-        </category>
-        <category name="Extent" colour="50" toolboxitemid="extCate" custom="flyout_extent">
-            <block type="support">
-                <value name="sup_np_shadow">
-                    <shadow type="np_reminder"></shadow>
-                </value>
-                <value name="sup_ext_shadow">
-                    <shadow type="spaextent_reminder"></shadow>
-                </value>
-            </block>
-            <label text="Spatial extent:"></label>
-            <block type="extent">
-                <value name="temext_shadow">
-                    <shadow type="temextent_reminder"></shadow>
-                </value>
-            </block>
-            <label text="Temporal extent:"></label>
-            <block type="temporalextent1"></block>
-            <block type="temporalextent2"></block>
-        </category>
-    </xml>
+<h1>Generating your geo-analytical question</h1>
+<section id="quesContainer">
+    <div id="questionDiv"></div>
+</section>
+<section id="blocklyContainer">
+    <div id="blocklyDiv"></div>
+</section>
+<xml id="toolbox">
+    <category name="Question words" colour="150" toolboxitemid="queCate">
+        <block type="where">
+            <value name = "where_np_shadow">
+                <shadow type="np_reminder"></shadow>
+            </value>
+            <value name = "where_extent_shadow">
+                <shadow type="extent_reminder"></shadow>
+            </value>
+        </block>
+        <block type="what">
+            <value name = "what_np_shadow">
+                <shadow type="np_reminder"></shadow>
+            </value>
+            <value name = "what_extent_shadow">
+                <shadow type="extent_reminder"></shadow>
+            </value>
+        </block>
+        <block type="which">
+            <value name = "which_np_shadow">
+                <shadow type="np_reminder"></shadow>
+            </value>
+            <value name = "which_extent_shadow">
+                <shadow type="extent_reminder"></shadow>
+            </value>
+        </block>
+        <block type="what_area1">
+            <value name = "wharea_np_shadow">
+                <shadow type="np_reminder"></shadow>
+            </value>
+            <value name = "wharea_extent_shadow">
+                <shadow type="extent_reminder"></shadow>
+            </value>
+        </block>
+        <block type="what_area2">
+            <value name = "wharea_rel_shadow">
+                <shadow type="rel_reminder"></shadow>
+            </value>
+            <value name = "wharea_extent_shadow">
+                <shadow type="extent_reminder"></shadow>
+            </value>
+        </block>
+        <block type="how_many">
+            <value name = "howmany_np_shadow">
+                <shadow type="np_reminder"></shadow>
+            </value>
+            <value name = "howmany_extent_shadow">
+                <shadow type="extent_reminder"></shadow>
+            </value>
+        </block>
+        <block type="from_where">
+            <value name = "fromwh_np_shadow">
+                <shadow type="np_reminder"></shadow>
+            </value>
+            <value name = "fromwh_extent_shadow">
+                <shadow type="extent_reminder"></shadow>
+            </value>
+        </block>
+    </category>
+    <!--for which, how many-->
+    <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="npWhichCate">
+        <block type="noun_phrase1_1">
+            <value name = "coreCAux_shadow1">
+                <shadow type="np_reminder"></shadow>
+            </value>
+        </block>
+        <block type="noun_phrase1_2">
+            <value name = "coreCAux_shadow2">
+                <shadow type="rel_reminder"></shadow>
+            </value>
+        </block>
+    </category>
+    <!--for where, what, what_area, from where and noun_phrase1-->
+    <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="npCate">
+        <block type="noun_phrase2">
+            <value name = "adjcoreC_shadow">
+                <shadow type="rel_reminder"></shadow>
+            </value>
+        </block>
+        <block type="noun_phrase3">
+            <value name = "coreCOfCoreC_shadow1">
+                <block type="noun_phrase3_connect">
+                    <value name = "np3_connect_shadow"><shadow type="rel_reminder"></shadow></value>
+                </block>
+                <!--				<shadow type="np_reminder"></shadow>-->
+            </value>
+        </block>
+        <block type="noun_phrase4">
+            <value name = "distCoreC1">
+                <block type="noun_phrase4_from">
+                    <value name = "np4_from_shadow"><shadow type="rel_reminder"></shadow></value>
+                </block>
+            </value>
+            <!--				<value name = "distCoreC2">-->
+            <!--					<block type="noun_phrase4_to">-->
+            <!--						<value name = "np4_to_shadow"><shadow type="rel_reminder"></shadow></value>-->
+            <!--					</block>-->
+            <!--				</value>-->
+            <value name = "distCoreC_shadow">
+                <shadow type="np_reminder"></shadow>
+            </value>
+        </block>
+    </category>
+    <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="np2Cate", custom="flyout_grid">
+        <!--			<block type="noun_phrase2">-->
+        <!--				<value name = "adjcoreC_shadow">-->
+        <!--					<shadow type="rel_reminder"></shadow>-->
+        <!--				</value>-->
+        <!--			</block>-->
+        <!--			<block type="grid1"></block>-->
+        <!--			<block type="grid2"></block>-->
+    </category>
+    <category name="Noun phrases&nbsp;&nbsp;&nbsp;" colour="240" toolboxitemid="np3Cate">
+        <block type="noun_phrase2">
+            <value name = "adjcoreC_shadow">
+                <shadow type="rel_reminder"></shadow>
+            </value>
+        </block>
+    </category>
+    <category name="Relationships&nbsp;&nbsp;&nbsp;" colour="300" toolboxitemid="relCate">
+        <block type="relationship1">
+            <value name = "rel1_np_shadow">
+                <shadow type="np_reminder"></shadow>
+            </value>
+        </block>
+        <block type="relationship2">
+            <value name = "rel3_np_shadow">
+                <shadow type="np_reminder"></shadow>
+            </value>
+        </block>
+        <block type="relationship3"></block>
+        <block type="relationship4">
+            <value name = "rel4_np">
+                <block type="rel4_np"></block>
+            </value>
+        </block>
+        <block type="relationship5">
+            <value name = "rel5_np">
+                <block type="rel5_np"></block>
+            </value>
+        </block>
+        <block type="relationship6"></block>
+    </category>
+    <category name="Extent" colour="50" toolboxitemid="extCate", custom="flyout_extent">
+        <!--			<block type="support">-->
+        <!--				<value name = "sup_np_shadow">-->
+        <!--					<shadow type="np_reminder"></shadow>-->
+        <!--				</value>-->
+        <!--				<value name = "sup_ext_shadow">-->
+        <!--					<shadow type="spaextent_reminder"></shadow>-->
+        <!--				</value>-->
+        <!--			</block>-->
+        <!--			<label text="Spatial extent:"></label>-->
+        <!--			<block type="extent">-->
+        <!--				<value name = "temext_shadow">-->
+        <!--					<shadow type="temextent_reminder"></shadow>-->
+        <!--				</value>-->
+        <!--			</block>-->
+        <!--			<label text="Temporal extent:"></label>-->
+        <!--			<block type="temporalextent1"></block>-->
+        <!--			<block type="temporalextent2"></block>-->
+    </category>
+</xml>
+<script>
+    let workspace = Blockly.inject('blocklyDiv', {
+        toolbox: document.getElementById('toolbox'),
+        zoom: {
+            controls: true,
+            wheel: true,
+            startScale: 1,
+            maxScale: 1.5,
+            minScale: 0.8,
+            scaleSpeed: 1.2
+        }
+    });
+    function refresh(){
+        setCategory();
+        ques_generator();
+        disable_sup_grid();
+        getAllBlocksList();
+    }
+    workspace.addChangeListener(refresh);
+    hideCategory();
+    Blockly.myFlyout&&Blockly.myFlyout.flyoutCategory&&(workspace.registerToolboxCategoryCallback(Blockly.MYFLYOUT_CATEGORY_NAME,Blockly.myFlyout.flyoutCategory));
+    Blockly.gridFlyout&&Blockly.gridFlyout.flyoutCategory&&(workspace.registerToolboxCategoryCallback(Blockly.GRIDFLYOUT_CATEGORY_NAME,Blockly.gridFlyout.flyoutCategory));
+</script>
+<button onclick="writeBresult()">Export question</button>
 </body>
 </html>
