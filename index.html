@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Geo-analytical question formulation</title>
-	<script src="https://unpkg.com/blockly/blockly.min.js"></script>
+	<script src="https://unpkg.com/blockly@9.2.1/blockly.min.js"></script>
+<!--	<script src="\package\blockly_compressed.js"></script>-->
 	<style>
 		h1 {text-align: center;}
 		#blocklyContainer {
@@ -37,6 +38,7 @@
 	</style>
 	<script src="blocks.js"></script>
 	<script src="generator.js"></script>
+	<script src="blockly_ner.js"></script>
 	<link rel="shortcut icon" href="#" />
 </head>
 <body>
@@ -188,7 +190,7 @@
 					<block type="rel5_np"></block>
 				</value>
 			</block>
-<!--			<block type="relationship6"></block>-->
+			<block type="relationship6"></block>
 		</category>
 		<category name="Extent" colour="50" toolboxitemid="extCate", custom="flyout_extent">
 <!--			<block type="support">-->
@@ -223,14 +225,16 @@
 			}
 		});
 		function refresh(){
-			setCategory()
-			ques_generator()
-			disable_sup_grid()
+			setCategory();
+			ques_generator();
+			disable_sup_grid();
+			getAllBlocksList();
 		}
 		workspace.addChangeListener(refresh);
 		hideCategory();
 		Blockly.myFlyout&&Blockly.myFlyout.flyoutCategory&&(workspace.registerToolboxCategoryCallback(Blockly.MYFLYOUT_CATEGORY_NAME,Blockly.myFlyout.flyoutCategory));
 		Blockly.gridFlyout&&Blockly.gridFlyout.flyoutCategory&&(workspace.registerToolboxCategoryCallback(Blockly.GRIDFLYOUT_CATEGORY_NAME,Blockly.gridFlyout.flyoutCategory));
 </script>
+	<button onclick="writeBresult()">Export question</button>
 </body>
 </html>

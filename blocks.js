@@ -344,7 +344,7 @@ Blockly.Blocks['noun_phrase1_1'] = {
               "type": "field_dropdown",
               "name": "where_AuxVerb",
               "options": [
-                ["have","have"], ["","null"], ["has","has"], ["do not have","donothave"], ["does not have","donothave"]
+                ["have","have"], ["",""], ["has","has"], ["do not have","donothave"], ["does not have","donothave"]
               ],
             },
             {
@@ -438,14 +438,14 @@ Blockly.Blocks['noun_phrase2'] = {
               "type": "field_dropdown",
               "name": "ar_the",
               "options": [
-                ["the","the"], ["","null"], ["a", "a"], ["an","an"]
+                ["the","the"], ["",""], ["a", "a"], ["an","an"],["each","each"]
               ]
             },
             {
               "type": "field_dropdown",
               "name": "adj_num",
               "options": [
-                  ["","null"], ["average","average"], ["median","median"], ["total","total"], ["nearest", "nearest"], ["fewest", "fewest"], ["lowest","lowest"], ["smallest","smallest"],["most", "most"], ["highest", "highest"], ["largest","largest"], ["fastest", "fastest"]
+                  ["",""], ["average","average"], ["median","median"], ["total","total"], ["similar", "similar"], ["nearest", "nearest"], ["fewest", "fewest"], ["lowest","lowest"], ["smallest","smallest"], ["highest", "highest"], ["largest","largest"], ["fastest", "fastest"], ["longest","longest"],["most popular", "most popular"], ["most intense", "most intense"]
               ]
             },
             // {
@@ -483,14 +483,14 @@ Blockly.Blocks['noun_phrase3'] = {
               "type": "field_dropdown",
               "name": "ar_the",
               "options": [
-                ["the","the"], ["","null"], ["a", "a"], ["an","an"]
+                ["the","the"], ["",""], ["a", "a"], ["an","an"]
               ]
             },
             {
               "type": "field_dropdown",
               "name": "adj_aggre",
               "options": [
-                ["","null"], ["nearest", "nearest"], ["average","average"], ["median","median"], ["total","total"],
+                ["",""], ["average","average"], ["median","median"], ["total","total"], ["nearest", "nearest"], ["fewest", "fewest"], ["lowest","lowest"], ["smallest","smallest"],["most", "most"], ["highest", "highest"], ["largest","largest"], ["fastest", "fastest"], ["longest","longest"]
               ]
             },
             {
@@ -570,14 +570,14 @@ Blockly.Blocks['noun_phrase4'] = {
               "type": "field_dropdown",
               "name": "ar_the",
               "options": [
-                ["the","the"], ["","null"], ["a", "a"], ["an","an"]
+                ["the","the"], ["",""], ["a", "a"], ["an","an"]
               ]
             },
             {
               "type": "field_dropdown",
               "name": "aggregate",
               "options": [
-                ["","null"], ["average","average"], ["median","median"], ["total","total"]
+                ["",""], ["average","average"], ["median","median"], ["total","total"], ["nearest", "nearest"], ["fewest", "fewest"], ["lowest","lowest"], ["smallest","smallest"],["most", "most"], ["highest", "highest"], ["largest","largest"], ["fastest", "fastest"], ["longest","longest"]
               ]
             },
             {
@@ -593,7 +593,7 @@ Blockly.Blocks['noun_phrase4'] = {
               "type": "field_dropdown",
               "name": "preposition",
               "options": [
-                ["from","from"], ["to","to"],["of","of"],["for","for"]
+                ["from","from"], ["to","to"],["of","of"],["for","for"], ["through", "through"]
               ]
             },
             {
@@ -606,7 +606,7 @@ Blockly.Blocks['noun_phrase4'] = {
               "type": "field_dropdown",
               "name": "preposition1",
               "options": [
-                ["","null"], ["to","to"], ["from","from"],["for","for"]
+                ["",""], ["to","to"], ["from","from"],["for","for"],["along", "along"]
               ]
             },
             // {
@@ -696,13 +696,63 @@ Blockly.Blocks['noun_phrase4_from'] = {
 //   }
 // }
 
+//"the centroids of 2 by 2 km grid cells"
+Blockly.Blocks['noun_phrase4_from2'] = {
+  init: function () {
+    this.jsonInit(
+        {
+          "message0": "%1 %2 %3 %4",
+          "args0": [
+            {
+              "type": "field_dropdown",
+              "name": "ar_the",
+              "options": [
+                ["the","the"], ["",""], ["a", "a"], ["an","an"]
+              ]
+            },
+            // {
+            //   "type": "field_dropdown",
+            //   "name": "adj_aggre",
+            //   "options": [
+            //     ["",""], ["average","average"], ["median","median"], ["total","total"], ["nearest", "nearest"], ["fewest", "fewest"], ["lowest","lowest"], ["smallest","smallest"],["most", "most"], ["highest", "highest"], ["largest","largest"], ["fastest", "fastest"], ["longest","longest"]
+            //   ]
+            // },
+            {
+              "type": "field_input",
+              "name": "np3_coreC",
+              "text": "centers"
+            },
+            {
+              "type": "field_dropdown",
+              "name": "preposition",
+              "options": [
+                ["of","of"], ["to","to"], ["for","for"], ["by","by"]
+              ],
+            },
+            {
+              "type": "input_value",
+              "name": "noun_phrase4_from2_shadow1",
+              "check": "np_type"
+            }
+          ],
+          //"output": "coreC_of_coreC",
+          "output": "np_type",
+          "colour": 240,
+          "tooltip": "",
+          "helpUrl": ""
+        }
+    )
+  }
+}
+
+//grids
 Blockly.Blocks['grid1'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(new Blockly.FieldNumber(2, 0, Infinity, 0.1), "num1")
         .appendField("by")
         .appendField(new Blockly.FieldNumber(2, 0, Infinity, 0.1), "num2")
-        .appendField(new Blockly.FieldDropdown([["kilometers","km"], ["meters","meters"],["feet","feet"], ["miles","miles"]]), "unit")
+        .appendField(new Blockly.FieldDropdown([["kilometers","kilometers"], ["kilometer","kilometer"],["meters","meters"],["meter","meter"], ["miles","miles"], ["mile","mile"], ["feet","feet"], ["foot","foot"]]), "unit")
         .appendField("grid cells");
     this.setInputsInline(true);
     this.setOutput(true, "np_type");
@@ -715,10 +765,10 @@ Blockly.Blocks['grid1'] = {
 Blockly.Blocks['grid2'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["hexagonal grid","hexgrid"]]), "hexgrid")
-        .appendField("with diameter of")
+        .appendField(new Blockly.FieldDropdown([["hexagonal grids","hexagonal grids"]]), "hexgrid")
+        .appendField("with a diameter of")
         .appendField(new Blockly.FieldNumber(2, 0, Infinity, 0.1), "num1")
-        .appendField(new Blockly.FieldDropdown([["kilometers","km"], ["meters","meters"],["feet","feet"], ["miles","miles"]]), "unit");
+        .appendField(new Blockly.FieldDropdown([["kilometers","kilometers"], ["kilometer","kilometer"],["meters","meters"],["meter","meter"], ["miles","miles"], ["mile","mile"], ["feet","feet"], ["foot","foot"]]), "unit");
     this.setInputsInline(true);
     this.setOutput(true, "np_type");
     this.setColour(210);
@@ -738,14 +788,14 @@ Blockly.Blocks['relationship1'] = {
               "type": "field_dropdown",
               "name": "subcon_aux",
               "options": [
-                ["","null"], ["and","and"], ["but not","butnot"], ["that is","thatis"], ["that are","thatare"]
+                ["",""], ["but not","but not"], ["that", "that"], ["that is","that is"], ["that are","that are"], ["that is not","that is not"], ["that are not","that are not"], ["that was","that was"], ["that were","that were"], ["that was not","that was not"], ["that were not","that were not"]
               ]
             },
             {
               "type": "field_dropdown",
               "name": "topology",
               "options": [
-                ["inside","inside"], ["within","within"], ["contain","contain"], ["covered by","coveredby"], ["overlap with","overlap"], ["intersected with","intersectedwith"], ["outside","outside"], ["away from","away"],  ["closest to","closeto"], ["affected by","affected"], ["with","with"], ["weighted by","weighted"]
+                ["in","in"], ["within","within"], ["contain","contain"], ["covered by","covered by"], ["overlap with","overlap with"], ["intersected with","intersected with"], ["outside","outside"], ["away from","away from"],  ["closest to","closest to"], ["on top of","on top of"], ["affected by","affected by"], ["with","with"], ["weighted by","weighted by"], ["answered by", "answered by"], ["along", "along"], ['maximize', 'maximize']
               ]
             },
             {
@@ -774,26 +824,26 @@ Blockly.Blocks['relationship2'] = {
               "type": "field_dropdown",
               "name": "subcon_aux",
               "options": [
-                ["","null"], ["and","and"], ["but not","butnot"], ["that is","thatis"], ["that are","thatare"]
+                ["",""], ["but not","but not"], ["that is","that is"], ["that are","that are"], ["that is not","that is not"], ["that are not","that are not"], ["that was","that was"], ["that were","that were"], ["that was not","that was not"], ["that were not","that were not"]
               ]
             },
             {
               "type": "field_dropdown",
-              "name": "topology",
+              "name": "r2_topology",
               "options": [
-                ["within","within"], ["outside","outside"], ["at least","least"], ["more than","more"], ["minimum","minimum"], ["maximum","maximum"]
+                ["within","within"], ["outside","outside"], ["more than","more than"], ["less than","less than"]
               ]
             },
             {
               "type": "field_number",
-              "name": "number",
+              "name": "r2_number",
               "value": 0
             },
             {
               "type": "field_dropdown",
-              "name": "buffer_unit",
+              "name": "r2_buffer_unit",
               "options": [
-                ["meters","ms"], ["meter","m"], ["kilometers","kms"], ["kilometer","km"], ["feet","feet"], ["foot","foot"], ["miles","miles"], ["mile","mile"], ["hours","hours"], ["hour","hour"], ["minutes","minutes"], ["minute","minute"], ["seconds","seconds"], ["second","second"]
+                ["meters","meters"], ["meter","meter"], ["kilometers","kilometers"], ["kilometer","kilometer"], ["feet","feet"], ["foot","foot"], ["miles","miles"], ["mile","mile"], ["hours","hours"], ["hour","hour"], ["minutes","minutes"], ["minute","minute"], ["seconds","seconds"], ["second","second"]
               ]
             },
             {
@@ -806,7 +856,7 @@ Blockly.Blocks['relationship2'] = {
                 ],
                 [
                   "",
-                  "null"
+                  ""
                 ],
                 [
                   "from",
@@ -833,12 +883,12 @@ Blockly.Blocks['relationship2'] = {
 Blockly.Blocks['relationship3'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["","null"], ["of","of"], ["and","and"], ["but not","butnot"], ["that is","thatis"], ["that are","thatare"]]), "subcon_aux")
-        .appendField(new Blockly.FieldDropdown([["equal to","equal"], ["larger than","larger"], ["smaller than","smaller"], ["higher than","higher"], ["lower than","lower"], ["more than","more"],["less than","less"], ["at least","least"], ["older than", "older"], ["younger than", "younger"]]), "comparison")
-        .appendField(new Blockly.FieldNumber(0), "number")
+        .appendField(new Blockly.FieldDropdown([["",""], ["but not","but not"], ["that is","that is"], ["that are","that are"], ["that is not","that is not"], ["that are not","that are not"], ["that was","that was"], ["that were","that were"], ["that was not","that was not"], ["that were not","that were not"]]), "subcon_aux")
+        .appendField(new Blockly.FieldDropdown([["equal to","equal to"], ["larger than","larger than"], ["smaller than","smaller than"], ["higher than","higher than"], ["lower than","lower than"], ["more than","more than"],["less than","less than"], ["more than or equal to","more than or equal to"], ["less than or equal to", "less than or equal to"], ["older than", "older than"], ["younger than", "younger than"], ["before", "before"],["after", "after"]]), "r3_comparison")
+        .appendField(new Blockly.FieldNumber(0), "r3_number")
         .appendField(new Blockly.FieldDropdown([
-            ["unit","unit"], ["percent","percent"], ["degrees","degrees"], ["dB", "Decibel"], ["dollars", "dollars"], ["kilowatt hours","kwh"], ["millimeters","mms"], ["meters", "ms"], ["kilometers", "kms"], ["square meters", "m2s"], ["square kilometers", "km2s"], ["millimeter","mm"], ["meter", "m"], ["kilometer", "km"], ["square meter", "m2"], ["square kilometer", "km2"]
-        ]), "comp_unit");
+            ["unit","unit"], ["",""], ["percent","percent"], ["degrees","degrees"], ["decibels", "decibels "], ["dollars", "dollars"], ["kilowatt hours","kilowatt hours"], ["inches of rain per year","inches of rain per year"], ["millimeters","millimeters"], ["millimeter","millimeter"], ["meters", "meters"], ["meter", "meter"], ["kilometers", "kilometers"], ["kilometer", "kilometer"], ["square meters", "square meters"], ["square meter", "square meter"], ["square kilometers", "square kilometers"],  ["square kilometer", "square kilometer"],["per square kilometer", "per square kilometer"]
+        ]), "r3_unit");
     this.setPreviousStatement(true, ["coreC_is", "adj_coreC", "rel_type"]);
     this.setNextStatement(true, "rel_type");
     this.setColour(300);
@@ -860,21 +910,21 @@ Blockly.Blocks['relationship4'] = {
             },
             {
               "type": "field_dropdown",
-              "name": "comparision",
+              "name": "r4_comparision",
               "options": [
-                ["equal to","equal"], ["larger than","larger"], ["smaller than","smaller"], ["higher than","higher"], ["lower than","lower"], ["more than","more"],["less than","less"], ["at least","least"]
+                ["equal to","equal to"], ["larger than","larger than"], ["smaller than","smaller than"], ["higher than","higher than"], ["lower than","lower than"], ["more than","more than"],["less than","less than"], ["at least","at least"], ["older than", "older than"], ["younger than", "younger than"]
               ]
             },
             {
               "type": "field_number",
-              "name": "number",
+              "name": "r4_number",
               "value": 0
             },
             {
               "type": "field_dropdown",
-              "name": "unit",
+              "name": "r4_unit",
               "options": [
-                  ["unit","unit"], ["percent","percent"], ["degrees","degrees"], ["dB", "Decibel"], ["dollars", "dollars"], ["kilowatt hours","kwh"], ["millimeters","mms"], ["meters", "ms"], ["kilometers", "kms"], ["square meters", "m2s"], ["square kilometers", "km2s"], ["millimeter","mm"], ["meter", "m"], ["kilometer", "km"], ["square meter", "m2"], ["square kilometer", "km2"]
+                  ["unit","unit"], ["",""], ["percent","percent"], ["per 1000 people","per 1000 people"], ["degrees","degrees"], ["decibels", "decibels"], ["dollars", "dollars"], ["kilowatt hours","kilowatt hours"], ["millimeters","millimeters"], ["millimeter","millimeter"], ["meters", "meters"], ["meter", "meter"], ["kilometers", "kilometers"], ["kilometer", "kilometer"], ["square meters", "square meters"], ["square meter", "square meter"], ["square kilometers", "square kilometers"],  ["square kilometer", "square kilometer"],["per square kilometer", "per square kilometer"]
               ]
             }
           ],
@@ -917,14 +967,14 @@ Blockly.Blocks['relationship5'] = {
           "args0": [
             {
               "type": "field_dropdown",
-              "name": "comparision",
+              "name": "r5_comparison",
               "options": [
-                  ["", "null"], ["no", "no"], ["more than","more"], ["less than","less"], ["larger than","larger"], ["smaller than","smaller"], ["higher than","higher"], ["lower than","lower"], ["at least","least"]
+                ["", ""], ["more than","more"], ["less than","less"], ["more than or equal to","more than or equal to"], ["less than or or equal to","less than or equal to"]
               ]
             },
             {
               "type": "field_number",
-              "name": "number",
+              "name": "r5_number",
               "value": 0
             },
             {
@@ -967,8 +1017,8 @@ Blockly.Blocks['rel5_np'] = {
 Blockly.Blocks['relationship6'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["","null"], ["and","and"], ["but not","butnot"], ["that is","thatis"], ["that are","thatare"]]), "subcon_aux")
-        .appendField(new Blockly.FieldDropdown([["for sale","forsale"], ["visible","visible"]]), "boolean");
+        .appendField(new Blockly.FieldDropdown([["",""], ["but not","but not"], ["that is","that is"], ["that are","that are"], ["that is not","that is not"], ["that are not","that are not"], ["that was","that was"], ["that were","that were"], ["that was not","that was not"], ["that were not","that were not"]]), "subcon_aux")
+        .appendField(new Blockly.FieldDropdown([["for sale","for sale"], ["visible","visible"], ["longest","longest"], ["biggest","biggest"]]), "rel6_adj");
     this.setPreviousStatement(true, ["coreC_is", "adj_coreC", "rel_type"]);
     this.setNextStatement(true, "rel_type");
     this.setColour(300);
@@ -1014,7 +1064,7 @@ Blockly.Blocks['noun_phrase_sup'] = {
           "args0": [
             {
               "type": "field_input",
-              "name": "np2_coreC",
+              "name": "np_sup_coreC",
               "text": "neighborhood",
             },
             {
@@ -1029,6 +1079,38 @@ Blockly.Blocks['noun_phrase_sup'] = {
           "helpUrl": ""
         }
     )
+  }
+}
+
+//for each grid
+Blockly.Blocks['sup_grid1'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldNumber(2, 0, Infinity, 0.1), "num1")
+        .appendField("by")
+        .appendField(new Blockly.FieldNumber(2, 0, Infinity, 0.1), "num2")
+        .appendField(new Blockly.FieldDropdown([["kilometers","kilometers"], ["kilometer","kilometer"],["meters","meters"],["meter","meter"], ["miles","miles"], ["mile","mile"], ["feet","feet"], ["foot","foot"]]), "unit")
+        .appendField("grid cell");
+    this.setInputsInline(true);
+    this.setOutput(true, "np_type");
+    this.setColour(210);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+}
+
+Blockly.Blocks['sup_grid2'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown([["hexagonal grid","hexagonal grid"]]), "hexgrid")
+        .appendField("with a diameter of")
+        .appendField(new Blockly.FieldNumber(2, 0, Infinity, 0.1), "num1")
+        .appendField(new Blockly.FieldDropdown([["kilometers","kilometers"], ["kilometer","kilometer"],["meters","meters"],["meter","meter"], ["miles","miles"], ["mile","mile"], ["feet","feet"], ["foot","foot"]]), "unit");
+    this.setInputsInline(true);
+    this.setOutput(true, "np_type");
+    this.setColour(210);
+    this.setTooltip("");
+    this.setHelpUrl("");
   }
 }
 
@@ -1047,7 +1129,7 @@ Blockly.Blocks['dist_band'] = {
               "type": "field_dropdown",
               "name": "unit",
               "options": [
-                ["meters","ms"], ["meter","m"], ["kilometers","kms"], ["kilometer","km"], ["feet","feet"], ["foot","foot"], ["miles","miles"], ["mile","mile"], ["square meters", "m2"], ["square meter", "m2"], ["square kilometers", "km2"], ["square kilometer", "km2"]
+                ["kilometers","kilometers"], ["kilometer","kilometer"], ["meters","meters"], ["meter","meter"], ["miles","miles"], ["mile","mile"], ["feet","feet"],["foot","foot"], ["square kilometers", "square kilometers"], ["square kilometer", "square kilometer"], ["square meters", "square meters"], ["square meter", "square meter"]
               ]
             },
             {
@@ -1071,8 +1153,13 @@ Blockly.Blocks['extent'] = {
   init: function () {
     this.jsonInit(
         {
-          "message0": "in %1 %2",
+          "message0": "%1 %2 %3",
           "args0": [
+            {
+              "type": "field_dropdown",
+              "name": "ext_in",
+              "options": [["in","in"],["of","of"]]
+            },
             {
               "type": "field_input",
               "name": "toponymy",
@@ -1097,7 +1184,7 @@ Blockly.Blocks['temporalextent1'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("in")
-        .appendField(new Blockly.FieldDropdown([["","null"], ["January","January"], ["February","February"], ["March","March"], ["April","April"], ["May","May"], ["June","June"], ["July","July"], ["August","August"], ["September","September"], ["October","October"], ["November","November"], ["December","December"]]), "month")
+        .appendField(new Blockly.FieldDropdown([["",""], ["January","January"], ["February","February"], ["March","March"], ["April","April"], ["May","May"], ["June","June"], ["July","July"], ["August","August"], ["September","September"], ["October","October"], ["November","November"], ["December","December"]]), "month")
         .appendField(new Blockly.FieldNumber(2022, 0), "year");
     this.setOutput(true, ["temext_type"]);
     this.setColour(50);
@@ -1110,10 +1197,10 @@ Blockly.Blocks['temporalextent2'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("from")
-        .appendField(new Blockly.FieldDropdown([["","null"], ["January","January"], ["February","February"], ["March","March"], ["April","April"], ["May","May"], ["June","June"], ["July","July"], ["August","August"], ["September","September"], ["October","October"], ["November","November"], ["December","December"], ["December","December"], ["December","December"]]), "month")
+        .appendField(new Blockly.FieldDropdown([["",""], ["January","January"], ["February","February"], ["March","March"], ["April","April"], ["May","May"], ["June","June"], ["July","July"], ["August","August"], ["September","September"], ["October","October"], ["November","November"], ["December","December"], ["December","December"], ["December","December"]]), "month")
         .appendField(new Blockly.FieldNumber(2010, 0), "year")
         .appendField("to")
-        .appendField(new Blockly.FieldDropdown([["","null"], ["January","January"], ["February","February"], ["March","March"], ["April","April"], ["May","May"], ["June","June"], ["July","July"], ["August","August"], ["September","September"], ["October","October"], ["November","November"], ["December","December"], ["December","December"], ["December","December"]]), "month1")
+        .appendField(new Blockly.FieldDropdown([["",""], ["January","January"], ["February","February"], ["March","March"], ["April","April"], ["May","May"], ["June","June"], ["July","July"], ["August","August"], ["September","September"], ["October","October"], ["November","November"], ["December","December"], ["December","December"], ["December","December"]]), "month1")
         .appendField(new Blockly.FieldNumber(2022, 0), "year1");
     this.setOutput(true, ["temext_type"]);
     this.setColour(50);
@@ -1183,8 +1270,6 @@ Blockly.Blocks['temextent_reminder'] = {
   }
 };
 
-
-
 Blockly.myFlyout={};
 Blockly.MYFLYOUT_CATEGORY_NAME="flyout_extent";
 Blockly.myFlyout.Blocks=[];
@@ -1193,15 +1278,21 @@ Blockly.gridFlyout={};
 Blockly.GRIDFLYOUT_CATEGORY_NAME="flyout_grid";
 Blockly.gridFlyout.Blocks=[];
 
-function disable_sup_grid(){
-  let elelist=[];
+function getAllBlocksList(){
+  let blocklist=[];
   workspace.getAllBlocks(true).forEach(element =>{
-    elelist.push(element.type);
+    blocklist.push(element.type);
   });
+  return blocklist
+}
 
-  console.log(elelist)
+// version after 9.3.0 using Blockly.utils.xml.textToDom
+// version before 9.3.0 using Blockly.Xml.textToDom
+function disable_sup_grid(){
 
-  if (elelist.includes('support')) {
+  let elelist = getAllBlocksList()
+
+  if (elelist.includes('support')||elelist.includes('extent')) {
     Blockly.myFlyout.Blocks=[];
     let label1DOM= Blockly.Xml.textToDom('<label text="Spatial extent:"></label>');
     Blockly.myFlyout.Blocks.push(label1DOM);
@@ -1210,10 +1301,10 @@ function disable_sup_grid(){
     let sup1Text = '<block type="support" disabled="true"><value name = "sup_np"><block type="noun_phrase_sup"><value name = "np_sup_shadow"><shadow type="rel_reminder"></shadow></value></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
     let sup1DOM = Blockly.Xml.textToDom(sup1Text);
     Blockly.myFlyout.Blocks.push(sup1DOM);
-    let sup2Text = '<block type="support" disabled="true"><value name = "sup_np"><block type="grid1"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
+    let sup2Text = '<block type="support" disabled="true"><value name = "sup_np"><block type="sup_grid1"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
     let sup2DOM = Blockly.Xml.textToDom(sup2Text);
     Blockly.myFlyout.Blocks.push(sup2DOM);
-    let sup3Text = '<block type="support" disabled="true"><value name = "sup_np"><block type="grid2"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
+    let sup3Text = '<block type="support" disabled="true"><value name = "sup_np"><block type="sup_grid2"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
     let sup3DOM = Blockly.Xml.textToDom(sup3Text);
     Blockly.myFlyout.Blocks.push(sup3DOM);
     let sup4Text = '<block type="support" disabled="true"><value name = "sup_np"><block type="dist_band"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
@@ -1234,10 +1325,10 @@ function disable_sup_grid(){
     let sup1Text = '<block type="support"><value name = "sup_np"><block type="noun_phrase_sup"><value name = "np_sup_shadow"><shadow type="rel_reminder"></shadow></value></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
     let sup1DOM = Blockly.Xml.textToDom(sup1Text);
     Blockly.myFlyout.Blocks.push(sup1DOM);
-    let sup2Text = '<block type="support"><value name = "sup_np"><block type="grid1"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
+    let sup2Text = '<block type="support"><value name = "sup_np"><block type="sup_grid1"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
     let sup2DOM = Blockly.Xml.textToDom(sup2Text);
     Blockly.myFlyout.Blocks.push(sup2DOM);
-    let sup3Text = '<block type="support"><value name = "sup_np"><block type="grid2"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
+    let sup3Text = '<block type="support"><value name = "sup_np"><block type="sup_grid2"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
     let sup3DOM = Blockly.Xml.textToDom(sup3Text);
     Blockly.myFlyout.Blocks.push(sup3DOM);
     let sup4Text = '<block type="support"><value name = "sup_np"><block type="dist_band"></block></value><value name = "sup_ext_shadow"><block type="extent"><value name = "temext_shadow"><shadow type="temextent_reminder"></shadow></value></block></value></block>';
@@ -1253,8 +1344,10 @@ function disable_sup_grid(){
 
   if (elelist.includes('noun_phrase4') && (elelist.includes("grid1") || elelist.includes("grid2"))) {
     Blockly.gridFlyout.Blocks=[];
-    let np2DOM = Blockly.Xml.textToDom('<block type="noun_phrase2" disabled="true"><value name = "adjcoreC_shadow"><shadow type="rel_reminder"></shadow></value></block>');
+    let np2DOM = Blockly.Xml.textToDom('<block type="noun_phrase2"><value name = "adjcoreC_shadow"><shadow type="rel_reminder"></shadow></value></block>');
     Blockly.gridFlyout.Blocks.push(np2DOM);
+    let np3DOM = Blockly.Xml.textToDom('<block type="noun_phrase4_from2"><value name = "noun_phrase4_from2_shadow1"></value></block>');
+    Blockly.gridFlyout.Blocks.push(np3DOM);
     let grid1DOM= Blockly.Xml.textToDom('<block type="grid1" disabled="true"></block>');
     Blockly.gridFlyout.Blocks.push(grid1DOM);
     let grid2DOM = Blockly.Xml.textToDom('<block type="grid2" disabled="true"></block>');
@@ -1263,6 +1356,8 @@ function disable_sup_grid(){
       Blockly.gridFlyout.Blocks=[];
       let np2DOM = Blockly.Xml.textToDom('<block type="noun_phrase2"><value name = "adjcoreC_shadow"><shadow type="rel_reminder"></shadow></value></block>');
       Blockly.gridFlyout.Blocks.push(np2DOM);
+      let np3DOM = Blockly.Xml.textToDom('<block type="noun_phrase4_from2"><value name = "noun_phrase4_from2_shadow1"></value></block>');
+      Blockly.gridFlyout.Blocks.push(np3DOM);
       let grid1DOM= Blockly.Xml.textToDom('<block type="grid1"></block>');
       Blockly.gridFlyout.Blocks.push(grid1DOM);
       let grid2DOM = Blockly.Xml.textToDom('<block type="grid2"></block>');
@@ -1272,6 +1367,8 @@ function disable_sup_grid(){
     Blockly.gridFlyout.Blocks=[];
     let np2DOM = Blockly.Xml.textToDom('<block type="noun_phrase2"><value name = "adjcoreC_shadow"><shadow type="rel_reminder"></shadow></value></block>');
     Blockly.gridFlyout.Blocks.push(np2DOM);
+    let np3DOM = Blockly.Xml.textToDom('<block type="noun_phrase4_from2"><value name = "noun_phrase4_from2_shadow1"></value></block>');
+    Blockly.gridFlyout.Blocks.push(np3DOM);
     let grid1DOM= Blockly.Xml.textToDom('<block type="grid1"></block>');
     Blockly.gridFlyout.Blocks.push(grid1DOM);
     let grid2DOM = Blockly.Xml.textToDom('<block type="grid2"></block>');
@@ -1349,9 +1446,9 @@ function setCategory() {
   const np3 = workspace.getBlocksByType("noun_phrase3");
   const np4 = workspace.getBlocksByType("noun_phrase4");
   const np4_from = workspace.getBlocksByType("noun_phrase4_from");
+  const np4_from2 = workspace.getBlocksByType("noun_phrase4_from2");
   const rel1 = workspace.getBlocksByType("relationship1");
   const rel2 = workspace.getBlocksByType("relationship2");
-  const rel3 = workspace.getBlocksByType("relationship3");
   const rel4 = workspace.getBlocksByType("relationship4");
 
   if(where.length == 1) {
@@ -1447,18 +1544,19 @@ function setCategory() {
     hideCategory()
   }
 
-  if(np4.length == 1 & (np2.length >= 1 | np4_from.length >= 1)){
-    np4Category()
+  //& (np2.length >= 1 | np4_from2.length >=1 |np4_from.length >= 1)
+  if(np4.length == 1){
+    np4Category();
   }else if (np3.length == 1) {
-    np2Category()
+    np2Category();
   }else if (np2.length >= 1) {
-    np2Category()
+    np2Category();
   }
 
   if (rel1.length >= 1 | rel2.length >= 1) {
-    rel1Category()
+    rel1Category();
     if (np4.length == 1){
-      np4Category()
+      np4Category();
     }
   }
 }

@@ -1,10 +1,19 @@
 const hintWords = ["noun_phrases", "relationships_", "extent_", "spatial_extent", "temporal_extent"];
-const removehintWords = (str, arr) => {
-    return arr.reduce((acc, val) => {
-        const regex = new RegExp(` ${val}`, "g");
-        return acc.replace(regex, '');
-    }, str);
-};
+// const removehintWords = (str, arr) => {
+//     return arr.reduce((acc, val) => {
+//         const regex = new RegExp(` ${val}`, "g");
+//         return acc.replace(regex, '');
+//     }, str);
+// };
+
+function removehintWords (str, arr){
+    return arr.reduce(myFunc, str)
+}
+
+function myFunc (acc, val) {
+    const regex = new RegExp(` ${val}`, "g");
+    return acc.replace(regex, '')
+}
 
 function ques_generator() {
     let question = '';
@@ -55,4 +64,28 @@ function ques_generator() {
     }else{
         document.getElementById("questionDiv").innerHTML = question;
     }
+
+    //get the types of relationship blocks used in the workspace and deduplicate them
+    var relBlocks = [...new Set(getAllBlocksList())].filter(function(block) {
+        return block.startsWith('relationship');
+    });
+    //if multiple (sub)conditions, add " and " between the last one and the second last one, and add a comma between the rest.
+    let rel_noaux = ['relationship4', 'relationship5'];
+    relBlocks.forEach((block) => {
+        let instances = workspace.getBlocksByType(block);
+        instances.forEach((relBlock) => {
+            let nextBlock = relBlock.getNextBlock();
+            if(nextBlock != null && nextBlock.getNextBlock() != null){
+                let relBlock_txt = removehintWords(relBlock.toString(), hintWords);
+                question = question.replace(relBlock_txt, relBlock_txt + ', ');
+                document.getElementById("questionDiv").innerHTML = question;
+            }else if(nextBlock != null && nextBlock.getNextBlock() == null && (rel_noaux.includes(nextBlock.type) || nextBlock.getFieldValue('subcon_aux') == "")){
+                let relBlock_txt = removehintWords(relBlock.toString(), hintWords);
+                question = question.replace(relBlock_txt, relBlock_txt + ' and ');
+                document.getElementById("questionDiv").innerHTML = question;
+            }
+        })
+    })
+
+    return question
 }
