@@ -4,7 +4,7 @@ let topoRel = ['inside', 'within', 'contain', 'covered by',
     'outside', 'away from', 'on top of', 'in'];
 let time_unit = ['hour','hours','minute','minutes', 'second', 'seconds'];
 let aggregate = ['average', 'median', 'total'];
-let extrema = ['fewest', 'lowest', 'smallest', 'most', 'most popular', 'most intense', 'biggest', 'highest', 'largest', 'fastest','nearest', 'closest to', 'longest','biggest'];
+let extrema = ['fewest', 'lowest', 'smallest', 'most', 'most popular', 'most intense', 'biggest', 'highest', 'largest', 'fastest','nearest', 'closest to', 'longest','biggest','maximize'];
 let comparison = ["equal to", "larger than", "smaller than", "higher than", "lower than", "more than", "less than", "more than or equal to", "less than or equal to", "older than", "younger than", "before", "after"];
 let boolean = ['answered by'];
 //let extredist = ['nearest'];
