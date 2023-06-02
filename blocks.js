@@ -593,7 +593,7 @@ Blockly.Blocks['noun_phrase4'] = {
               "type": "field_dropdown",
               "name": "preposition",
               "options": [
-                ["from","from"], ["to","to"],["of","of"],["for","for"], ["through", "through"]
+                ["from","from"], ["to","to"],["of","of"],["for","for"]
               ]
             },
             {
@@ -606,7 +606,7 @@ Blockly.Blocks['noun_phrase4'] = {
               "type": "field_dropdown",
               "name": "preposition1",
               "options": [
-                ["",""], ["to","to"], ["from","from"],["for","for"],["along", "along"]
+                ["",""], ["to","to"], ["from","from"],["for","for"], ["through", "through"]
               ]
             },
             // {
@@ -710,13 +710,6 @@ Blockly.Blocks['noun_phrase4_from2'] = {
                 ["the","the"], ["",""], ["a", "a"], ["an","an"]
               ]
             },
-            // {
-            //   "type": "field_dropdown",
-            //   "name": "adj_aggre",
-            //   "options": [
-            //     ["",""], ["average","average"], ["median","median"], ["total","total"], ["nearest", "nearest"], ["fewest", "fewest"], ["lowest","lowest"], ["smallest","smallest"],["most", "most"], ["highest", "highest"], ["largest","largest"], ["fastest", "fastest"], ["longest","longest"]
-            //   ]
-            // },
             {
               "type": "field_input",
               "name": "np3_coreC",
@@ -726,7 +719,7 @@ Blockly.Blocks['noun_phrase4_from2'] = {
               "type": "field_dropdown",
               "name": "preposition",
               "options": [
-                ["of","of"], ["to","to"], ["for","for"], ["by","by"]
+                ["of","of"], ["to","to"], ["for","for"], ["by","by"], ["along","along"]
               ],
             },
             {
@@ -1245,18 +1238,6 @@ Blockly.Blocks['extent_reminder'] = {
     });
   }
 };
-
-// Blockly.Blocks['spaextent_reminder'] = {
-//   init: function() {
-//     this.jsonInit({
-//       "message0": "spatial_extent",
-//       "output": "ext_type",
-//       "colour": 50,
-//       "tooltip": "",
-//       "helpUrl": ""
-//     });
-//   }
-// };
 
 Blockly.Blocks['temextent_reminder'] = {
   init: function() {

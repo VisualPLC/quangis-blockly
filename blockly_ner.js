@@ -108,11 +108,11 @@ function block_ner() {
             bresult.replaceQ = bresult.question.replace('for each ' + np_sup_coreC, 'support').trim();
         }else if (block == 'sup_grid1'){
             let sup_grid1 = workspace.getBlocksByType('sup_grid1');
-            write_obj('grid',sup_grid1[0].toString()); // g1_parent = grid1[0].parentBlock_.type;
+            write_obj('sup_grid',sup_grid1[0].toString()); // g1_parent = grid1[0].parentBlock_.type;
             bresult.replaceQ = bresult.question.replace('for each ' + sup_grid1, 'support').trim();
         }else if (block == 'sup_grid2') {
             let sup_grid2 = workspace.getBlocksByType('sup_grid2');
-            write_obj('grid',sup_grid2[0].toString());
+            write_obj('sup_grid',sup_grid2[0].toString());
             bresult.replaceQ = bresult.question.replace('for each ' + sup_grid2, 'support').trim();
         }else if (block == 'dist_band') {
             let dist_band = workspace.getBlocksByType('dist_band')[0].toString();
