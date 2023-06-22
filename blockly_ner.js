@@ -82,14 +82,14 @@ function block_ner() {
             instances.forEach((eachr3) => {
                 let eachr3_txt = eachr3.getFieldValue('r3_comparison');
                 checkTag(eachr3_txt);
-                let r3_entity = eachr3.getFieldValue('r3_number') + ' ' + eachr3.getFieldValue('r3_unit'); // todo?: older than 65 is date
+                let r3_entity = eachr3.getFieldValue('r3_number') + ' ' + eachr3.getFieldValue('r3_unit'); //
                 write_obj('quantity',r3_entity);
             });
         }else if (block == 'relationship4') {
             instances.forEach((eachr4) => {
                 let eachr4_txt = eachr4.getFieldValue('r4_comparision');
                 checkTag(eachr4_txt);
-                let r4_entity = eachr4.getFieldValue('r4_number') + ' ' + eachr4.getFieldValue('r4_unit'); // todo?: older than 65 is date
+                let r4_entity = eachr4.getFieldValue('r4_number') + ' ' + eachr4.getFieldValue('r4_unit'); //
                 write_obj('quantity',r4_entity);
             });
         }else if (block == 'relationship5') {
