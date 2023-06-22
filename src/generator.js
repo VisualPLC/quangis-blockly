@@ -69,7 +69,8 @@ function ques_generator() {
     var relBlocks = [...new Set(getAllBlocksList())].filter(function(block) {
         return block.startsWith('relationship');
     });
-    //if multiple (sub)conditions, add ", and " between the last one and the second last one, and add a comma between the rest.
+    //if multiple (sub)conditions, add " and " between the last one and the second last one, and add a comma between the rest.
+    let rel_noaux = ['relationship4', 'relationship5'];
     relBlocks.forEach((block) => {
         let instances = workspace.getBlocksByType(block);
         instances.forEach((relBlock) => {
@@ -78,9 +79,9 @@ function ques_generator() {
                 let relBlock_txt = removehintWords(relBlock.toString(), hintWords);
                 question = question.replace(relBlock_txt, relBlock_txt + ', ');
                 document.getElementById("questionDiv").innerHTML = question;
-            }else if(nextBlock != null && nextBlock.getNextBlock() == null){
+            }else if(nextBlock != null && nextBlock.getNextBlock() == null && (rel_noaux.includes(nextBlock.type) || nextBlock.getFieldValue('subcon_aux') == "")){
                 let relBlock_txt = removehintWords(relBlock.toString(), hintWords);
-                question = question.replace(relBlock_txt, relBlock_txt + ', and ');
+                question = question.replace(relBlock_txt, relBlock_txt + ' and ');
                 document.getElementById("questionDiv").innerHTML = question;
             }
         })
