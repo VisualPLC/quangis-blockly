@@ -1,20 +1,7 @@
-# gis-question-formulator
+# quangis-blockly
 
-This repository, right now, contains two projects that contain some 
-overlap:
-
-1.  A `blockly` interface in JavaScript to allow the user to construct a 
-    question in constrained natural language.
-2.  A natural language parser, using machine learning and ANTLR, that 
-    identifies functional roles from a question, and produces the 
-    underlying transformation graph.
-
-The first of these is at the root of the repository. The second is in 
-the [`parser_module/`](parser_module/) subdirectory. We are working 
-towards unifying this functionality; see [issue 
-#1](https://github.com/quangis/geo-question-parser/issues/1) for 
-details.
-
+This repository, contains `blockly` interface in JavaScript to allow the 
+user to construct a question in constrained natural language.
 
 ## Installation
 
