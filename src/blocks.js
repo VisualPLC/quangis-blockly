@@ -31,7 +31,7 @@ qBlocks = [
         ],
         "inputsInline": false,
         "colour": 150,
-        "tooltip": "",
+        "tooltip": "Select an auxiliary verb to formulate a question that starts with 'Where'.",
         "helpUrl": "",
         "custom": {
             "category": ["Question words"],
@@ -71,7 +71,7 @@ qBlocks = [
         ],
         "inputsInline": false,
         "colour": 150,
-        "tooltip": "",
+        "tooltip": "Select an auxiliary verb to formulate a question that starts with 'What'.",
         "helpUrl": "",
         "custom": {
             "category": ["Question words"],
@@ -97,7 +97,7 @@ qBlocks = [
         ],
         "inputsInline": false,
         "colour": 150,
-        "tooltip": "",
+        "tooltip": "Formulate a question that starts with 'Which'.",
         "helpUrl": "",
         "custom": {
             "category": ["Question words"],
@@ -130,7 +130,7 @@ qBlocks = [
             }
         ],
         "colour": 150,
-        "tooltip": "",
+        "tooltip": "Select an auxiliary verb to formulate a question that starts with 'What areas'.",
         "helpUrl": "",
         "custom": {
             "category": ["Question words"],
@@ -166,7 +166,7 @@ qBlocks = [
         ],
         "colour": 150,
         "tooltip": "",
-        "helpUrl": "",
+        "helpUrl": "Select a linking verb to formulate a question that starts with 'What areas'.",
         "custom": {
             "category": ["Question words"],
             "type": "Wh-word blocks",
@@ -191,7 +191,7 @@ qBlocks = [
         ],
         "inputsInline": false,
         "colour": 150,
-        "tooltip": "",
+        "tooltip": "Formulate a question that starts with 'How many'.",
         "helpUrl": "",
         "custom": {
             "category": ["Question words"],
@@ -231,7 +231,7 @@ qBlocks = [
         ],
         "inputsInline": false,
         "colour": 150,
-        "tooltip": "",
+        "tooltip": "Select an auxiliary verb to formulate a question that starts with 'From where'.",
         "helpUrl": "",
         "custom": {
             "category": ["Question words"],
@@ -269,7 +269,7 @@ qBlocks = [
         "inputsInline": false,
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Input a noun or noun phrase and then select an auxiliary verb.",
         "helpUrl": "",
         "custom": {
             "category": ["Noun phrases"],
@@ -310,7 +310,7 @@ qBlocks = [
         //"output": "coreC_is",
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Input a noun or noun phrase and then select a linking verb.",
         "helpUrl": "",
         "custom": {
             "category": ["Noun phrases"],
@@ -373,7 +373,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Create a single noun phrase. Select an article word if needed, an adjective if needed. Then enter a noun or noun phrase.",
         "helpUrl": "",
         "custom": {
             "category": ["Noun phrases"],
@@ -452,7 +452,7 @@ qBlocks = [
         //"output": "coreC_of_coreC",
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Create a noun phrase that can connect another noun phrase block. Select an article word if needed, an adjective if needed. Then enter a noun or noun phrase and select a preposition to connect another noun phrase block.",
         "helpUrl": "",
         "custom": {
             "category": ["Noun phrases"],
@@ -478,7 +478,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Enter a noun or noun phrase.",
         "helpUrl": "",
         "custom": {
             "category": ["Noun phrases"],
@@ -572,7 +572,7 @@ qBlocks = [
         //"output": "distancecoreC",
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Create a noun phrase that can connect a maximum of another two noun phrase blocks. Select an article word if needed, an adjective if needed. Then enter a noun or noun phrase and select at least one preposition to connect another noun phrase block.",
         "helpUrl": "",
         "custom": {
             "category": ["Noun phrases"],
@@ -598,7 +598,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Enter a noun or noun phrase. ",
         "helpUrl": "",
         "custom": {
             "category": ["Noun phrases"],
@@ -647,7 +647,7 @@ qBlocks = [
         //"output": "coreC_of_coreC",
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Select an article word if needed. Then enter a noun or noun phrase and select a preposition to connect another noun phrase block.",
         "helpUrl": "",
         "custom": {
             "category": ["Noun phrases"],
@@ -688,7 +688,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 210,
-        "tooltip": "",
+        "tooltip": "Define the size of square grid cells by entering a number and selecting a length unit.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -730,7 +730,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 210,
-        "tooltip": "",
+        "tooltip": "Define the size of hexagonal grids by entering a number and selecting a length unit.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -792,7 +792,7 @@ qBlocks = [
         "previousStatement": "rel_type",
         "nextStatement": "rel_type",
         "colour": 300,
-        "tooltip": "",
+        "tooltip": "Create a relationship using a prepostion or prepositional phrase or a verb. Select a conjunction if needed. Select a relationship word.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -874,7 +874,7 @@ qBlocks = [
         "previousStatement": "rel_type",
         "nextStatement": "rel_type",
         "colour": 300,
-        "tooltip": "",
+        "tooltip": "Create a distance relationship. Select a conjunction if needed. Select a relationship word, and then enter a number and select a unit to define distance. Select a preposition to connect one noun phrase block.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -956,7 +956,7 @@ qBlocks = [
         "previousStatement": "rel_type",
         "nextStatement": "rel_type",
         "colour": 300,
-        "tooltip": "",
+        "tooltip": "Create a comparison relationship. Select a comparative phrase. Then enter a number and select a unit.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -1024,7 +1024,7 @@ qBlocks = [
         "previousStatement": "rel_type",
         "nextStatement": "rel_type",
         "colour": 300,
-        "tooltip": "",
+        "tooltip": "Create a comparison relationship with a noun phrase. Enter a noun or noun phrase in the blue block. Then select a comparative phrase, enter a number and select a unit.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -1045,7 +1045,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Enter a noun or noun phrase.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -1083,7 +1083,7 @@ qBlocks = [
         "previousStatement": "rel_type",
         "nextStatement": "rel_type",
         "colour": 300,
-        "tooltip": "",
+        "tooltip": "Create a comparison relationship with a quantity. Select a comparative phrase. Then enter a number and a noun phrase to define quantity.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -1104,7 +1104,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Enter a noun or noun phrase.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -1147,7 +1147,7 @@ qBlocks = [
         "previousStatement": "rel_type",
         "nextStatement": "rel_type",
         "colour": 300,
-        "tooltip": "",
+        "tooltip": "Create a relationship using an adjective. Select a conjunction if needed. Then select an adjective.",
         "helpUrl": "",
         "custom": {
             "category": ["Relationships"],
@@ -1175,7 +1175,7 @@ qBlocks = [
         "inputsInline": false,
         "output": "ext_type",
         "colour": 50,
-        "tooltip": "",
+        "tooltip": "Declare regions to aggregate information.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -1201,7 +1201,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 240,
-        "tooltip": "",
+        "tooltip": "Enter a place type.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -1242,7 +1242,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 210,
-        "tooltip": "",
+        "tooltip": "Define the size of square grid cells by entering a number and selecting a length unit.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -1284,7 +1284,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 210,
-        "tooltip": "",
+        "tooltip": "Define the size of hexagonal grids by entering a number and selecting a length unit.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -1330,7 +1330,7 @@ qBlocks = [
         ],
         "output": "np_type",
         "colour": 210,
-        "tooltip": "",
+        "tooltip": "Define the size of distance windows by entering a number and selecting a length unit. Usually used in geographic distribution questions.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -1361,7 +1361,7 @@ qBlocks = [
         ],
         "output": "ext_type",
         "colour": 50,
-        "tooltip": "",
+        "tooltip": "Define a spatial extent for a question. Select a preposition and enter a place name.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -1402,7 +1402,7 @@ qBlocks = [
         ],
         "output": "temext_type",
         "colour": 50,
-        "tooltip": "",
+        "tooltip": "Define a temporal extent for a question. Select a month and enter a year. Only allow numeric input for the input box.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -1468,7 +1468,7 @@ qBlocks = [
         ],
         "output": "temext_type",
         "colour": 50,
-        "tooltip": "",
+        "tooltip": "Define a temporal extent for a question. Select a month and enter a year. Only allow numeric input for the input box.",
         "helpUrl": "",
         "custom": {
             "category": ["Extent"],
@@ -1483,7 +1483,7 @@ qBlocks = [
         "message0": "noun_phrases",
         "output": "np_type",
         "colour": 230,
-        "tooltip": "",
+        "tooltip": "Replace this reminder with one block from the Noun phrases category.",
         "helpUrl": "",
         "custom": {
             "category": [],
@@ -1497,7 +1497,7 @@ qBlocks = [
         "message0": "relationships_",
         "previousStatement": "rel_type",
         "colour": 285,
-        "tooltip": "",
+        "tooltip": "Replace this reminder with one block from the Relationships category.",
         "helpUrl": "",
         "custom": {
             "category": [],
@@ -1511,7 +1511,7 @@ qBlocks = [
         "message0": "extent_",
         "output": "ext_type",
         "colour": 50,
-        "tooltip": "",
+        "tooltip": "Replace this reminder with one spatial extent block from the Extent category.",
         "helpUrl": "",
         "custom": {
             "category": [],
@@ -1525,7 +1525,7 @@ qBlocks = [
         "message0": "temporal_extent",
         "output": "temext_type",
         "colour": 50,
-        "tooltip": "",
+        "tooltip": "Replace this reminder with one temporal extent block from the Extent category.",
         "helpUrl": "",
         "custom": {
             "category": [],
