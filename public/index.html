@@ -235,6 +235,9 @@
 		Blockly.myFlyout&&Blockly.myFlyout.flyoutCategory&&(workspace.registerToolboxCategoryCallback(Blockly.MYFLYOUT_CATEGORY_NAME,Blockly.myFlyout.flyoutCategory));
 		Blockly.gridFlyout&&Blockly.gridFlyout.flyoutCategory&&(workspace.registerToolboxCategoryCallback(Blockly.GRIDFLYOUT_CATEGORY_NAME,Blockly.gridFlyout.flyoutCategory));
 </script>
-	<button onclick="writeBresult()">Export question</button>
+	<button onclick="writeBresult()" title="Parse the question constructed with blockly and save the result as a json file.">Export question</button>
+    <button onclick="serialize()" title="Serialize as a json file the current state of the blockly workspace">Serialize</button>
+    <input type="file" id="file-selector" title="Load (deserilize) a blockly workspace from a local json file">
+    <script src="serializer.js"></script>
 </body>
 </html>
