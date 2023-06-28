@@ -253,10 +253,10 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "where_AuxVerb",
                 "options": [
-                    ["have","have"], 
-                    ["",""], 
-                    ["has","has"], 
-                    ["do not have","donothave"], 
+                    ["have","have"],
+                    ["",""],
+                    ["has","has"],
+                    ["do not have","donothave"],
                     ["does not have","donothave"]
                 ]
             },
@@ -338,20 +338,20 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "adj_num",
                 "options": [
-                    ["",""], 
-                    ["average","average"], 
-                    ["median","median"], 
-                    ["total","total"], 
-                    ["similar", "similar"], 
-                    ["nearest", "nearest"], 
-                    ["fewest", "fewest"], 
-                    ["lowest","lowest"], 
-                    ["smallest","smallest"], 
-                    ["highest", "highest"], 
-                    ["largest","largest"], 
-                    ["fastest", "fastest"], 
+                    ["",""],
+                    ["average","average"],
+                    ["median","median"],
+                    ["total","total"],
+                    ["similar", "similar"],
+                    ["nearest", "nearest"],
+                    ["fewest", "fewest"],
+                    ["lowest","lowest"],
+                    ["smallest","smallest"],
+                    ["highest", "highest"],
+                    ["largest","largest"],
+                    ["fastest", "fastest"],
                     ["longest","longest"],
-                    ["most popular", "most popular"], 
+                    ["most popular", "most popular"],
                     ["most intense", "most intense"]
                 ]
             },
@@ -390,9 +390,9 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "ar_the",
                 "options": [
-                    ["the","the"], 
-                    ["",""], 
-                    ["a", "a"], 
+                    ["the","the"],
+                    ["",""],
+                    ["a", "a"],
                     ["an","an"]
                 ]
             },
@@ -400,18 +400,18 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "adj_aggre",
                 "options": [
-                    ["",""], 
-                    ["average","average"], 
-                    ["median","median"], 
-                    ["total","total"], 
-                    ["nearest", "nearest"], 
-                    ["fewest", "fewest"], 
-                    ["lowest","lowest"], 
+                    ["",""],
+                    ["average","average"],
+                    ["median","median"],
+                    ["total","total"],
+                    ["nearest", "nearest"],
+                    ["fewest", "fewest"],
+                    ["lowest","lowest"],
                     ["smallest","smallest"],
-                    ["most", "most"], 
-                    ["highest", "highest"], 
-                    ["largest","largest"], 
-                    ["fastest", "fastest"], 
+                    ["most", "most"],
+                    ["highest", "highest"],
+                    ["largest","largest"],
+                    ["fastest", "fastest"],
                     ["longest","longest"]
                 ]
             },
@@ -424,9 +424,9 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "preposition",
                 "options": [
-                    ["of","of"], 
-                    ["to","to"], 
-                    ["for","for"], 
+                    ["of","of"],
+                    ["to","to"],
+                    ["for","for"],
                     ["by","by"]
                 ]
             },
@@ -495,9 +495,9 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "ar_the",
                 "options": [
-                    ["the","the"], 
-                    ["",""], 
-                    ["a", "a"], 
+                    ["the","the"],
+                    ["",""],
+                    ["a", "a"],
                     ["an","an"]
                 ]
             },
@@ -505,18 +505,18 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "aggregate",
                 "options": [
-                    ["",""], 
-                    ["average","average"], 
-                    ["median","median"], 
-                    ["total","total"], 
-                    ["nearest", "nearest"], 
-                    ["fewest", "fewest"], 
-                    ["lowest","lowest"], 
+                    ["",""],
+                    ["average","average"],
+                    ["median","median"],
+                    ["total","total"],
+                    ["nearest", "nearest"],
+                    ["fewest", "fewest"],
+                    ["lowest","lowest"],
                     ["smallest","smallest"],
-                    ["most", "most"], 
-                    ["highest", "highest"], 
-                    ["largest","largest"], 
-                    ["fastest", "fastest"], 
+                    ["most", "most"],
+                    ["highest", "highest"],
+                    ["largest","largest"],
+                    ["fastest", "fastest"],
                     ["longest","longest"]
                 ]
             },
@@ -533,10 +533,11 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "preposition",
                 "options": [
-                    ["from","from"], 
+                    ["from","from"],
                     ["to","to"],
                     ["of","of"],
-                    ["for","for"]
+                    ["for","for"],
+                    ["through", "through"]
                 ]
             },
             {
@@ -549,10 +550,10 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "preposition1",
                 "options": [
-                    ["",""], 
-                    ["to","to"], 
+                    ["",""],
+                    ["to","to"],
                     ["from","from"],
-                    ["for","for"], 
+                    ["for","for"],
                     ["through", "through"]
                 ]
             },
@@ -616,9 +617,9 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "ar_the",
                 "options": [
-                    ["the","the"], 
-                    ["",""], 
-                    ["a", "a"], 
+                    ["the","the"],
+                    ["",""],
+                    ["a", "a"],
                     ["an","an"]
                 ]
             },
@@ -631,10 +632,10 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "preposition",
                 "options": [
-                    ["of","of"], 
-                    ["to","to"], 
-                    ["for","for"], 
-                    ["by","by"], 
+                    ["of","of"],
+                    ["to","to"],
+                    ["for","for"],
+                    ["by","by"],
                     ["along","along"]
                 ]
             },
@@ -675,13 +676,13 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "unit",
                 "options": [
-                    ["kilometers", "kilometers"], 
-                    ["kilometer", "kilometer"], 
-                    ["meters", "meters"], 
-                    ["meter", "meter"], 
-                    ["miles", "miles"], 
-                    ["mile", "mile"], 
-                    ["feet", "feet"], 
+                    ["kilometers", "kilometers"],
+                    ["kilometer", "kilometer"],
+                    ["meters", "meters"],
+                    ["meter", "meter"],
+                    ["miles", "miles"],
+                    ["mile", "mile"],
+                    ["feet", "feet"],
                     ["foot", "foot"]
                 ]
             }
@@ -717,13 +718,13 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "unit",
                 "options": [
-                    ["kilometers","kilometers"], 
+                    ["kilometers","kilometers"],
                     ["kilometer","kilometer"],
                     ["meters","meters"],
-                    ["meter","meter"], 
-                    ["miles","miles"], 
-                    ["mile","mile"], 
-                    ["feet","feet"], 
+                    ["meter","meter"],
+                    ["miles","miles"],
+                    ["mile","mile"],
+                    ["feet","feet"],
                     ["foot","foot"]
                 ]
             }
@@ -748,16 +749,16 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "subcon_aux",
                 "options": [
-                    ["",""], 
-                    ["but not","but not"], 
-                    ["that", "that"], 
-                    ["that is","that is"], 
-                    ["that are","that are"], 
-                    ["that is not","that is not"], 
-                    ["that are not","that are not"], 
-                    ["that was","that was"], 
-                    ["that were","that were"], 
-                    ["that was not","that was not"], 
+                    ["",""],
+                    ["but not","but not"],
+                    ["that", "that"],
+                    ["that is","that is"],
+                    ["that are","that are"],
+                    ["that is not","that is not"],
+                    ["that are not","that are not"],
+                    ["that was","that was"],
+                    ["that were","that were"],
+                    ["that was not","that was not"],
                     ["that were not","that were not"]
                 ]
             },
@@ -765,21 +766,21 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "topology",
                 "options": [
-                    ["in","in"], 
-                    ["within","within"], 
-                    ["contain","contain"], 
-                    ["covered by","covered by"], 
-                    ["overlap with","overlap with"], 
-                    ["intersected with","intersected with"], 
-                    ["outside","outside"], 
-                    ["away from","away from"],  
-                    ["closest to","closest to"], 
-                    ["on top of","on top of"], 
-                    ["affected by","affected by"], 
-                    ["with","with"], 
-                    ["weighted by","weighted by"], 
-                    ["answered by", "answered by"], 
-                    ["along", "along"], 
+                    ["in","in"],
+                    ["within","within"],
+                    ["contain","contain"],
+                    ["covered by","covered by"],
+                    ["overlap with","overlap with"],
+                    ["intersected with","intersected with"],
+                    ["outside","outside"],
+                    ["away from","away from"],
+                    ["closest to","closest to"],
+                    ["on top of","on top of"],
+                    ["affected by","affected by"],
+                    ["with","with"],
+                    ["weighted by","weighted by"],
+                    ["answered by", "answered by"],
+                    ["along", "along"],
                     ["maximize", "maximize"]
                 ]
             },
@@ -809,15 +810,15 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "subcon_aux",
                 "options": [
-                    ["",""], 
-                    ["but not","but not"], 
-                    ["that is","that is"], 
-                    ["that are","that are"], 
-                    ["that is not","that is not"], 
-                    ["that are not","that are not"], 
-                    ["that was","that was"], 
-                    ["that were","that were"], 
-                    ["that was not","that was not"], 
+                    ["",""],
+                    ["but not","but not"],
+                    ["that is","that is"],
+                    ["that are","that are"],
+                    ["that is not","that is not"],
+                    ["that are not","that are not"],
+                    ["that was","that was"],
+                    ["that were","that were"],
+                    ["that was not","that was not"],
                     ["that were not","that were not"]
                 ]
             },
@@ -825,9 +826,9 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "r2_topology",
                 "options": [
-                    ["within","within"], 
-                    ["outside","outside"], 
-                    ["more than","more than"], 
+                    ["within","within"],
+                    ["outside","outside"],
+                    ["more than","more than"],
                     ["less than","less than"]
                 ]
             },
@@ -840,19 +841,19 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "r2_buffer_unit",
                 "options": [
-                    ["meters","meters"], 
-                    ["meter","meter"], 
-                    ["kilometers","kilometers"], 
-                    ["kilometer","kilometer"], 
-                    ["feet","feet"], 
-                    ["foot","foot"], 
-                    ["miles","miles"], 
-                    ["mile","mile"], 
-                    ["hours","hours"], 
-                    ["hour","hour"], 
-                    ["minutes","minutes"], 
-                    ["minute","minute"], 
-                    ["seconds","seconds"], 
+                    ["meters","meters"],
+                    ["meter","meter"],
+                    ["kilometers","kilometers"],
+                    ["kilometer","kilometer"],
+                    ["feet","feet"],
+                    ["foot","foot"],
+                    ["miles","miles"],
+                    ["mile","mile"],
+                    ["hours","hours"],
+                    ["hour","hour"],
+                    ["minutes","minutes"],
+                    ["minute","minute"],
+                    ["seconds","seconds"],
                     ["second","second"]
                 ]
             },
@@ -891,15 +892,15 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "subcon_aux",
                 "options": [
-                    ["",""], 
-                    ["but nt","but not"], 
-                    ["that is","that is"], 
-                    ["that are","that are"], 
-                    ["that is not","that is not"], 
-                    ["that are not","that are not"], 
-                    ["that was","that was"], 
-                    ["that were","that were"], 
-                    ["that was not","that was not"], 
+                    ["",""],
+                    ["but not","but not"],
+                    ["that is","that is"],
+                    ["that are","that are"],
+                    ["that is not","that is not"],
+                    ["that are not","that are not"],
+                    ["that was","that was"],
+                    ["that were","that were"],
+                    ["that was not","that was not"],
                     ["that were not","that were not"]
                 ]
             },
@@ -907,17 +908,17 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "r3_comparison",
                 "options": [
-                    ["equal to","equal to"], 
-                    ["larger than","larger than"], 
-                    ["smaller than","smaller than"], 
-                    ["higher than","higher than"], 
-                    ["lower than","lower than"], 
+                    ["equal to","equal to"],
+                    ["larger than","larger than"],
+                    ["smaller than","smaller than"],
+                    ["higher than","higher than"],
+                    ["lower than","lower than"],
                     ["more than","more than"],
-                    ["less than","less than"], 
-                    ["more than or equal to","more than or equal to"], 
-                    ["less than or equal to", "less than or equal to"], 
-                    ["older than", "older than"], 
-                    ["younger than", "younger than"], 
+                    ["less than","less than"],
+                    ["more than or equal to","more than or equal to"],
+                    ["less than or equal to", "less than or equal to"],
+                    ["older than", "older than"],
+                    ["younger than", "younger than"],
                     ["before", "before"],
                     ["after", "after"]
                 ]
@@ -929,24 +930,24 @@ qBlocks = [
             },
             {
                 "type": "field_dropdown",
-                "name": "UNIT",
+                "name": "r3_unit",
                 "options": [
-                    ["unit","unit"], 
-                    ["",""], 
-                    ["percent","percent"], 
-                    ["degrees","degrees"], 
-                    ["decibels", "decibels "], 
-                    ["dollars", "dollars"], 
-                    ["kilowatt hours","kilowatt hours"], 
-                    ["inches of rain per year","inches of rain per year"], 
-                    ["millimeters","millimeters"], 
-                    ["millimeter","millimeter"], 
-                    ["meters", "meters"], 
-                    ["meter", "meter"], 
-                    ["kilometers", "kilometers"], 
-                    ["kilometer", "kilometer"], 
-                    ["square meters", "square meters"], 
-                    ["square meter", "square meter"], 
+                    ["unit","unit"],
+                    ["",""],
+                    ["percent","percent"],
+                    ["degrees","degrees"],
+                    ["decibels", "decibels "],
+                    ["dollars", "dollars"],
+                    ["kilowatt hours","kilowatt hours"],
+                    ["inches of rain per year","inches of rain per year"],
+                    ["millimeters","millimeters"],
+                    ["millimeter","millimeter"],
+                    ["meters", "meters"],
+                    ["meter", "meter"],
+                    ["kilometers", "kilometers"],
+                    ["kilometer", "kilometer"],
+                    ["square meters", "square meters"],
+                    ["square meter", "square meter"],
                     ["square kilometers", "square kilometers"],
                     ["square kilometer", "square kilometer"],
                     ["per square kilometer", "per square kilometer"]
@@ -978,15 +979,15 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "r4_comparision",
                 "options": [
-                    ["equal to","equal to"], 
-                    ["larger than","larger than"], 
-                    ["smaller than","smaller than"], 
-                    ["higher than","higher than"], 
-                    ["lower than","lower than"], 
+                    ["equal to","equal to"],
+                    ["larger than","larger than"],
+                    ["smaller than","smaller than"],
+                    ["higher than","higher than"],
+                    ["lower than","lower than"],
                     ["more than","more than"],
-                    ["less than","less than"], 
-                    ["at least","at least"], 
-                    ["older than", "older than"], 
+                    ["less than","less than"],
+                    ["at least","at least"],
+                    ["older than", "older than"],
                     ["younger than", "younger than"]
                 ]
             },
@@ -999,22 +1000,22 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "r4_unit",
                 "options": [
-                    ["unit","unit"], 
-                    ["",""], 
-                    ["percent","percent"], 
-                    ["per 1000 people","per 1000 people"], 
-                    ["degrees","degrees"], 
-                    ["decibels", "decibels"], 
-                    ["dollars", "dollars"], 
-                    ["kilowatt hours","kilowatt hours"], 
-                    ["millimeters","millimeters"], 
-                    ["millimeter","millimeter"], 
-                    ["meters", "meters"], 
-                    ["meter", "meter"], 
-                    ["kilometers", "kilometers"], 
-                    ["kilometer", "kilometer"], 
-                    ["square meters", "square meters"], 
-                    ["square meter", "square meter"], 
+                    ["unit","unit"],
+                    ["",""],
+                    ["percent","percent"],
+                    ["per 1000 people","per 1000 people"],
+                    ["degrees","degrees"],
+                    ["decibels", "decibels"],
+                    ["dollars", "dollars"],
+                    ["kilowatt hours","kilowatt hours"],
+                    ["millimeters","millimeters"],
+                    ["millimeter","millimeter"],
+                    ["meters", "meters"],
+                    ["meter", "meter"],
+                    ["kilometers", "kilometers"],
+                    ["kilometer", "kilometer"],
+                    ["square meters", "square meters"],
+                    ["square meter", "square meter"],
                     ["square kilometers", "square kilometers"],
                     ["square kilometer", "square kilometer"],
                     ["per square kilometer", "per square kilometer"]
@@ -1062,10 +1063,10 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "r5_comparison",
                 "options": [
-                    ["", ""], 
-                    ["more than","more"], 
-                    ["less than","less"], 
-                    ["more than or equal to","more than or equal to"], 
+                    ["", ""],
+                    ["more than","more"],
+                    ["less than","less"],
+                    ["more than or equal to","more than or equal to"],
                     ["less than or or equal to","less than or equal to"]
                 ]
             },
@@ -1121,15 +1122,15 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "subcon_aux",
                 "options": [
-                    ["",""], 
-                    ["but not","but not"], 
-                    ["that is","that is"], 
-                    ["that are","that are"], 
-                    ["that is not","that is not"], 
-                    ["that are not","that are not"], 
-                    ["that was","that was"], 
-                    ["that were","that were"], 
-                    ["that was not","that was not"], 
+                    ["",""],
+                    ["but not","but not"],
+                    ["that is","that is"],
+                    ["that are","that are"],
+                    ["that is not","that is not"],
+                    ["that are not","that are not"],
+                    ["that was","that was"],
+                    ["that were","that were"],
+                    ["that was not","that was not"],
                     ["that were not","that were not"]
                 ]
             },
@@ -1137,9 +1138,9 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "rel6_adj",
                 "options": [
-                    ["for sale","for sale"], 
-                    ["visible","visible"], 
-                    ["longest","longest"], 
+                    ["for sale","for sale"],
+                    ["visible","visible"],
+                    ["longest","longest"],
                     ["biggest","biggest"]
                 ]
             }
@@ -1229,13 +1230,13 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "unit",
                 "options": [
-                    ["kilometers", "kilometers"], 
-                    ["kilometer", "kilometer"], 
-                    ["meters", "meters"], 
-                    ["meter", "meter"], 
-                    ["miles", "miles"], 
-                    ["mile", "mile"], 
-                    ["feet", "feet"], 
+                    ["kilometers", "kilometers"],
+                    ["kilometer", "kilometer"],
+                    ["meters", "meters"],
+                    ["meter", "meter"],
+                    ["miles", "miles"],
+                    ["mile", "mile"],
+                    ["feet", "feet"],
                     ["foot", "foot"]
                 ]
             }
@@ -1271,13 +1272,13 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "unit",
                 "options": [
-                    ["kilometers", "kilometers"], 
-                    ["kilometer", "kilometer"], 
-                    ["meters", "meters"], 
-                    ["meter", "meter"], 
-                    ["miles", "miles"], 
-                    ["mile", "mile"], 
-                    ["feet", "feet"], 
+                    ["kilometers", "kilometers"],
+                    ["kilometer", "kilometer"],
+                    ["meters", "meters"],
+                    ["meter", "meter"],
+                    ["miles", "miles"],
+                    ["mile", "mile"],
+                    ["feet", "feet"],
                     ["foot", "foot"]
                 ]
             }
@@ -1306,17 +1307,17 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "unit",
                 "options": [
-                    ["kilometers","kilometers"], 
-                    ["kilometer","kilometer"], 
-                    ["meters","meters"], 
-                    ["meter","meter"], 
-                    ["miles","miles"], 
-                    ["mile","mile"], 
+                    ["kilometers","kilometers"],
+                    ["kilometer","kilometer"],
+                    ["meters","meters"],
+                    ["meter","meter"],
+                    ["miles","miles"],
+                    ["mile","mile"],
                     ["feet","feet"],
-                    ["foot","foot"], 
-                    ["square kilometers", "square kilometers"], 
-                    ["square kilometer", "square kilometer"], 
-                    ["square meters", "square meters"], 
+                    ["foot","foot"],
+                    ["square kilometers", "square kilometers"],
+                    ["square kilometer", "square kilometer"],
+                    ["square meters", "square meters"],
                     ["square meter", "square meter"]
                 ]
             },
@@ -1378,18 +1379,18 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "month",
                 "options": [
-                    ["", ""], 
-                    ["January", "January"], 
-                    ["February", "February"], 
-                    ["March", "March"], 
-                    ["April", "April"], 
-                    ["May", "May"], 
-                    ["June", "June"], 
-                    ["July", "July"], 
-                    ["August", "August"], 
-                    ["September", "September"], 
-                    ["October", "October"], 
-                    ["November", "November"], 
+                    ["", ""],
+                    ["January", "January"],
+                    ["February", "February"],
+                    ["March", "March"],
+                    ["April", "April"],
+                    ["May", "May"],
+                    ["June", "June"],
+                    ["July", "July"],
+                    ["August", "August"],
+                    ["September", "September"],
+                    ["October", "October"],
+                    ["November", "November"],
                     ["December", "December"]
                 ]
             },
@@ -1419,18 +1420,18 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "month1",
                 "options": [
-                    ["", ""], 
-                    ["January", "January"], 
-                    ["February", "February"], 
-                    ["March", "March"], 
-                    ["April", "April"], 
-                    ["May", "May"], 
-                    ["June", "June"], 
-                    ["July", "July"], 
-                    ["August", "August"], 
-                    ["September", "September"], 
-                    ["October", "October"], 
-                    ["November", "November"], 
+                    ["", ""],
+                    ["January", "January"],
+                    ["February", "February"],
+                    ["March", "March"],
+                    ["April", "April"],
+                    ["May", "May"],
+                    ["June", "June"],
+                    ["July", "July"],
+                    ["August", "August"],
+                    ["September", "September"],
+                    ["October", "October"],
+                    ["November", "November"],
                     ["December", "December"]
                 ]
             },
@@ -1444,18 +1445,18 @@ qBlocks = [
                 "type": "field_dropdown",
                 "name": "month2",
                 "options": [
-                    ["", ""], 
-                    ["January", "January"], 
-                    ["February", "February"], 
-                    ["March", "March"], 
-                    ["April", "April"], 
-                    ["May", "May"], 
-                    ["June", "June"], 
-                    ["July", "July"], 
-                    ["August", "August"], 
-                    ["September", "September"], 
-                    ["October", "October"], 
-                    ["November", "November"], 
+                    ["", ""],
+                    ["January", "January"],
+                    ["February", "February"],
+                    ["March", "March"],
+                    ["April", "April"],
+                    ["May", "May"],
+                    ["June", "June"],
+                    ["July", "July"],
+                    ["August", "August"],
+                    ["September", "September"],
+                    ["October", "October"],
+                    ["November", "November"],
                     ["December", "December"]
                 ]
             },
@@ -1620,7 +1621,7 @@ function disable_sup_grid(){
     Blockly.gridFlyout.Blocks=[];
     let np2DOM = Blockly.Xml.textToDom('<block type="noun_phrase2"><value name = "adjcoreC_shadow"><shadow type="rel_reminder"></shadow></value></block>');
     Blockly.gridFlyout.Blocks.push(np2DOM);
-    let np3DOM = Blockly.Xml.textToDom('<block type="noun_phrase4_from2"><value name = "noun_phrase4_from2_shadow1"></value></block>');
+    let np3DOM = Blockly.Xml.textToDom('<block type="noun_phrase4_from2"><value name = "noun_phrase4_from2_shadow1"><shadow type="np_reminder"></shadow></value></block>');
     Blockly.gridFlyout.Blocks.push(np3DOM);
     let grid1DOM= Blockly.Xml.textToDom('<block type="grid1" disabled="true"></block>');
     Blockly.gridFlyout.Blocks.push(grid1DOM);
@@ -1630,7 +1631,7 @@ function disable_sup_grid(){
       Blockly.gridFlyout.Blocks=[];
       let np2DOM = Blockly.Xml.textToDom('<block type="noun_phrase2"><value name = "adjcoreC_shadow"><shadow type="rel_reminder"></shadow></value></block>');
       Blockly.gridFlyout.Blocks.push(np2DOM);
-      let np3DOM = Blockly.Xml.textToDom('<block type="noun_phrase4_from2"><value name = "noun_phrase4_from2_shadow1"></value></block>');
+      let np3DOM = Blockly.Xml.textToDom('<block type="noun_phrase4_from2"><value name = "noun_phrase4_from2_shadow1"><shadow type="np_reminder"></shadow></value></block>');
       Blockly.gridFlyout.Blocks.push(np3DOM);
       let grid1DOM= Blockly.Xml.textToDom('<block type="grid1"></block>');
       Blockly.gridFlyout.Blocks.push(grid1DOM);
@@ -1641,7 +1642,7 @@ function disable_sup_grid(){
     Blockly.gridFlyout.Blocks=[];
     let np2DOM = Blockly.Xml.textToDom('<block type="noun_phrase2"><value name = "adjcoreC_shadow"><shadow type="rel_reminder"></shadow></value></block>');
     Blockly.gridFlyout.Blocks.push(np2DOM);
-    let np3DOM = Blockly.Xml.textToDom('<block type="noun_phrase4_from2"><value name = "noun_phrase4_from2_shadow1"></value></block>');
+    let np3DOM = Blockly.Xml.textToDom('<block type="noun_phrase4_from2"><value name = "noun_phrase4_from2_shadow1"><shadow type="np_reminder"></shadow></value></block>');
     Blockly.gridFlyout.Blocks.push(np3DOM);
     let grid1DOM= Blockly.Xml.textToDom('<block type="grid1"></block>');
     Blockly.gridFlyout.Blocks.push(grid1DOM);
