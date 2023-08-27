@@ -245,7 +245,7 @@ qBlocks = [
         "message0": "%1 %2 %3",
         "args0": [
             {
-                "type": "field_input",
+                "type": "field_cpicker", // [SC] custom input field
                 "name": "np1_1_object",
                 "text": "buildings"
             },
@@ -283,7 +283,7 @@ qBlocks = [
         "message0": "%1 %2 %3",
         "args0": [
             {
-                "type": "field_input",
+                "type": "field_cpicker", // [SC] custom input field
                 "name": "np1_1_object",
                 "text": "buildings"
             },
@@ -361,7 +361,7 @@ qBlocks = [
             //   "text": ""
             // },
             {
-                "type": "field_input",
+                "type": "field_cpicker", // [SC] custom input field
                 "name": "np2_coreC",
                 "text": "ski piste"
             },
@@ -416,7 +416,7 @@ qBlocks = [
                 ]
             },
             {
-                "type": "field_input",
+                "type": "field_cpicker", // [SC] custom input field
                 "name": "np3_coreC",
                 "text": "cluster"
             },
@@ -466,7 +466,7 @@ qBlocks = [
         "message0": "%1 %2",
         "args0": [
             {
-                "type": "field_input",
+                "type": "field_cpicker", // [SC] custom input field
                 "name": "np3_connect_coreC",
                 "text": "fire calls"
             },
@@ -521,7 +521,7 @@ qBlocks = [
                 ]
             },
             {
-                "type": "field_input",
+                "type": "field_cpicker", // [SC] custom input field
                 "name": "np4_coreC",
                 "text": "shortest route"
             },
@@ -587,7 +587,7 @@ qBlocks = [
         "message0": "%1 %2",
         "args0": [
             {
-                "type": "field_input",
+                "type": "field_cpicker", // [SC] custom input field
                 "name": "np4_from_coreC",
                 "text": "car accidents"
             },
@@ -624,7 +624,7 @@ qBlocks = [
                 ]
             },
             {
-                "type": "field_input",
+                "type": "field_cpicker", // [SC] custom input field
                 "name": "np3_coreC",
                 "text": "centers"
             },
@@ -1039,7 +1039,7 @@ qBlocks = [
         "message0": "%1",
         "args0": [
             {
-                "type": "field_input",
+                "type": "field_cpicker", // [SC] custom input field
                 "name": "rel4_np_input",
                 "text": "crime rate"
             }
@@ -1098,7 +1098,7 @@ qBlocks = [
         "message0": "%1",
         "args0": [
             {
-                "type": "field_input",
+                "type": "field_cpicker", // [SC] custom input field
                 "name": "rel5_np_input",
                 "text": "health care facility"
             }
@@ -1190,7 +1190,7 @@ qBlocks = [
         "message0": "%1 %2",
         "args0": [
             {
-                "type": "field_input",
+                "type": "field_cpicker", // [SC] custom input field
                 "name": "np_sup_coreC",
                 "text": "neighborhood"
             },
