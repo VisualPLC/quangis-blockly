@@ -89,14 +89,15 @@ async function loadCDict(){
                 }).catch(error => {
                     console.error("Unable to fetch the parser network concept dictionary.");
                     return reject(error);
+                }).finally(() => {
+                    cDict.sort(function (a, b) {
+                        return a.term.localeCompare(b.term);
+                    });
+                    
+                    ls.setItem(cDictKey, JSON.stringify(cDict));
+                    console.log("Fetched the parser core concept dictionary.");
                 });
                 
-                cDict.sort(function (a, b) {
-                    return a.term.localeCompare(b.term);
-                });
-                
-                ls.setItem(cDictKey, JSON.stringify(cDict));
-                console.log("Fetched the parser core concept dictionary.");
                 return resolve("");
             }).catch(error => {
                 console.error("Unable to fetch the parser core concept dictionary.");
@@ -182,7 +183,7 @@ class FieldCPicker extends Blockly.FieldTextInput {
             option.className = 'bl_concept';
             option.dataset.cc = cObj.cc;
             option.dataset.measure = cObj.measure;
-            option.dataset.term = cObj.term;
+            option.dataset.term = cObj.term.toLowerCase();
             option.innerHTML = `'${cObj.term}' &lt;<div class="bl_cval">${cObj.cc}</div>, <div class="bl_mval">${cObj.measure}</div>&gt;`;
             
             this.boundEvents_.push(
